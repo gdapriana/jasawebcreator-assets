@@ -1,0 +1,97 @@
+@use 'lib' as v
+
+#_pricing
+  width: 100%
+  @include v.flx($d: column, $j: start, $i: stretch, $g: 0)
+  padding: 100px 0
+  background-color: #f0f4f6
+
+  ._pricing-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: stretch, $g: 5rem)
+
+    ._header
+      @include v.flx($d: column, $j: start, $i: center)
+
+      ._title
+        @include v.heading()
+        text-align: center
+
+      ._desc
+        @include v.subtext()
+        text-align: center
+        max-width: 800px
+
+    ._content
+      @include v.grd($c: 1, $r:3, $sr: auto)
+
+      @media (min-width: 1000px)
+        @include v.grd($c: 3, $r:1, $sr: auto)
+
+      ._card
+        position: relative
+        background-color: white
+        padding: 3rem
+        @include v.flx($d: column, $g: 2rem)
+
+        &:nth-child(2)
+          ._price
+            color: var(--green-col)
+
+          ._cta
+            border-color: var(--green-col)
+            color: var(--green-col)
+            &:hover
+              background-color: var(--green-col)
+
+
+
+        ._label
+          background-color: black
+          color: white
+          padding: 8px
+          position: absolute
+          top: -3%
+          font-size: 14px
+          left: 50%
+          transform: translateX(-50%)
+
+        ._card-header
+          @include v.flx($d: column, $g: .4rem)
+
+          ._card-title
+            @include v.heading()
+
+          ._for
+            @include v.subtext($cl: rgba(0,0,0,0.5))
+
+        ._price
+          color: var(--blue-col)
+          font-size: 35px
+          font-weight: 100
+
+          span
+            font-size: 80px
+
+
+
+        ._list
+          @include v.flx($d: column, $j: start, $i: start)
+
+        ._cta
+          padding: 10px 16px
+          border-radius: 999em
+          border: 2px solid var(--blue-col)
+          color: var(--blue-col)
+          @include v.trans()
+
+          &:hover
+            background-color: var(--blue-col)
+            color: white
+
+
+          @media (min-width: 1000px)
+            padding: 12px 40px
+
+

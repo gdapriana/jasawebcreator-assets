@@ -1,0 +1,131 @@
+@use 'lib' as v
+
+#_about
+    width: 100%
+    padding: 4rem 0
+    background-color: white
+    @include v.disflex()
+
+    ._about-wrapper
+        width: 100%
+        padding: 0 7%
+
+        @include v.disflex($d: column-reverse, $i: stretch, $j: start, $g:4rem)
+        @media (min-width: 1000px)
+            @include v.disflex($d: row, $i: center, $j: center, $g:4rem)
+
+            
+        ._about-image
+            position: relative
+            @media (min-width: 1000px)
+                width: 45%
+            @include v.disflex()
+            aspect-ratio: 1/1
+
+            ._image-back
+                z-index: 1
+                border: 2px solid #A4DDE2
+                position: absolute
+                background-color: #D1FBFF
+                border-radius: 20px
+                bottom: 0
+                width: 100%
+                height: 90%
+                left: 50%
+                right: 50%
+                transform: translateX(-50%)
+                img
+                    width: 100%
+
+            ._image-people
+                z-index: 2
+                width: 90%
+        
+        ._about-content
+            @include v.disflex($d: column, $j: start, $i: start, $g: 2rem)
+            @media (min-width: 1000px)
+                width: 55%
+
+            ._about-title
+                @include v.heading()
+                @media (min-width: 1000px)
+                    @include v.heading($fs: 64px)
+
+            ._about-desc
+                @include v.subtext()
+                @media (min-width: 1000px)
+                    @include v.subtext($fs: 16px)
+
+            ._about-additional
+                width: 100%
+                padding: 20px
+                border-radius: 10px
+                border: 1px solid #0E0B3D26
+                background-color: var(--e-global-color-34b9103)
+                @include v.disflex($d: column, $j: start, $i: start)
+                @media (min-width: 1000px)
+                    @include v.disflex($d: row, $j: center, $i: center)
+
+                p
+                    &:first-child
+                        padding-right: 20px
+                        font-size: 16px
+                        color: var(--e-global-color-primary)
+                        span
+                            font-size: 40px
+                            font-family: var(--e-global-typography-primary-font-family)
+                            font-weight: bold
+
+                            i
+                                font-size: 30px
+                                color: green
+                    &:last-child
+                        @include v.subtext()
+                        border-top: 1px solid rgba(0, 0, 0, 0.1)
+                        border-left: none
+                        padding-top: 20px
+                        padding-left: 0
+                        @media (min-width: 1000px)
+                            padding-top: 0
+                            padding-left: 20px
+                            @include v.subtext($fs: 16px)
+                            border-left: 1px solid rgba(0, 0, 0, 0.1)
+                            border-top: none
+                            flex: 1
+
+            ._about-cta-wrapper
+                @include v.disflex($g:2rem)
+                ._about-cta
+                    @include v.disflex()
+                    border-radius: 999em
+                    padding: 4px
+                    border: 1px solid var(--e-global-color-secondary)
+                    background-color: white
+                    span
+                        background-color: var(--e-global-color-secondary)
+                        padding: 16px 36px 
+                        color: white
+                        border-radius: 999em
+                        font-family: var(--e-global-typography-primary-font-family)
+
+                ._about-video-cta
+                    display: none
+                    @media (min-width: 1000px)
+                        @include v.disflex()
+                    ._video-cta-btn
+                        width: 50px
+                        aspect-ratio: 1/1
+                        @include v.disflex()
+                        @include v.trans()
+                        border-radius: 999em
+                        border: 1px solid var(--e-global-color-primary)
+                        &:hover
+                            background-color: var(--e-global-color-primary)
+                            color: white
+
+                    span
+                        color: var(--e-global-color-primary)
+
+
+                
+            

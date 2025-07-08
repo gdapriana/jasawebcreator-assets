@@ -1,0 +1,67 @@
+@use 'lib' as v
+
+#_adore
+  width: 100%
+  @include v.flx($d: column, $j: start, $i: stretch, $g: 0)
+  padding: 100px 0
+  background-color: white
+
+  ._adore-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: stretch, $g: 5rem)
+    @media (min-width: 1000px)
+      @include v.flx($d: row, $j: center, $i: center, $g: 10rem)
+
+    ._header
+      @include v.flx($d: column, $j: start, $i: start)
+      @media (min-width: 1000px)
+        width: 50%
+
+
+      ._icon
+        color: #11aff1
+        font-size: 3rem
+
+      ._title
+        @include v.heading()
+
+      ._subtitle
+        @include v.heading($fs: 24px)
+
+      ._desc
+        @include v.subtext()
+
+      ._add
+        width: 100%
+        @include v.flx($d: column, $j: start, $i: stretch)
+
+        ._add-card
+          padding: 2rem 0
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+          @include v.flx($g: 2rem)
+
+          ._card-icon
+            color: #11aff1
+            font-size: 40px
+
+          ._card-title-desc
+            flex: 1
+            @include v.flx($d: column, $j: start, $i: start)
+
+            ._card-title
+              font-size: 20px
+              font-weight: 400
+
+            ._card-desc
+              color: rgba(0, 0, 0, 0.5)
+
+    ._image
+      @include v.flx()
+      @media (min-width: 1000px)
+        width: 50%
+      img
+        width: 80%
+
+
+

@@ -1,0 +1,45 @@
+@use 'lib' as v
+
+#_team
+  width: 100%
+  @include v.flx($d: column, $j: start, $i: stretch, $g: 0)
+  background-color: var(--white-col-1)
+  padding: 100px 0
+
+  ._team-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: stretch, $g: 4rem)
+
+    ._header
+      @include v.flx($d: column, $j: start, $i: center)
+
+      ._title
+        @include v.heading()
+
+      ._desc
+        @include v.subtext()
+        max-width: 500px
+        text-align: center
+
+    ._content
+      width: 100%
+      @include v.grd($c: 1, $r: 4, $sr: auto)
+
+      @media (min-width: v.$md)
+        @include v.grd($c: 4, $r: 1, $sr: auto)
+
+      ._card
+        @include v.flx($d: column, $j: start, $i: center, $g: .2rem)
+        img
+          width: 100%
+
+        ._card-title
+          font-weight: 500
+          font-size: 20px
+          margin-top: 1rem
+
+        ._card-desc
+          color: var(--text-col-2)
+
+

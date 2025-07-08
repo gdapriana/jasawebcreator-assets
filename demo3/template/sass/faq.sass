@@ -1,0 +1,75 @@
+@use 'lib' as v
+
+#_faq
+    width: 100%
+    padding: 4rem 0
+    background-color: white
+    @include v.disflex()
+
+    ._faq-wrapper
+        width: 100%
+        padding: 0 7%
+        @include v.disflex($d: column, $i: stretch, $j: start, $g:4rem)
+
+
+        ._faq-header
+            @include v.disflex($d: column, $j: start, $i: stretch)
+            @media (min-width: 768px)
+                @include v.disflex($d: row, $j: center, $i: center)
+
+            ._faq-pill-title
+                @include v.disflex($d: column, $j:start, $i: center)
+                @media (min-width: 768px)
+                    width: 70%
+                    @include v.disflex($d: column, $j:start, $i: start)
+                ._faq-title
+                    @include v.heading()
+                    text-align: center
+                    @media (min-width: 768px)
+                        text-align: left
+                        @include v.heading($fs: 64px)
+
+            ._faq-description
+                @include v.subtext()
+                text-align: center
+                @media (min-width: 768px)
+                    @include v.subtext($fs: 16px)
+                    text-align: left
+                    width: 30%
+
+        ._faq-content
+            display: grid
+            gap: 2rem
+            grid-template-columns: 1fr
+            @media (min-width: 768px)
+                grid-template-columns: repeat(2, 1fr)
+            @media (min-width: 1000px)
+                grid-template-columns: repeat(3, 1fr)
+
+            ._faq-card
+                padding: 2rem
+                border: 2px solid #0E0B3D26
+                background-color: #FCFCFF
+                border-radius: 10px
+                @include v.trans()
+                @include v.disflex($d: column, $j: start, $i: start)
+
+                &:first-child, &:hover
+                    border: 2px solid var(--e-global-color-secondary)
+
+                ._card-title
+                    color: var(--e-global-color-primary)
+                    font-size: 16px
+                    font-weight: 600
+                    font-family: var(--e-global-typography-primary-font-family)
+                    @media (min-width: 1000px)
+                        font-size: 18px
+                
+                ._card-desc
+                    @include v.subtext()
+                    line-height: 1.3
+                    @media (min-width: 1000px)
+                        font-size: 16px
+
+
+

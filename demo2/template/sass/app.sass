@@ -1,0 +1,28 @@
+@use 'lib' as v
+
+#_app
+  width: 100%
+  @include v.flx($d: column, $j: start, $i: stretch, $g: 0)
+  padding: 100px 0
+  background-color: #f0f4f6
+
+  ._app-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: center, $g: 2rem)
+
+    ._title
+      @include v.heading()
+      text-align: center
+
+    ._desc
+      @include v.subtext()
+      text-align: center
+      max-width: 800px
+
+    ._cta-wrapper
+      @include v.flx($d: column, $j: center, $i: center)
+      @media (min-width: v.$md)
+        @include v.flx($d: row, $j: center, $i: center)
+
+

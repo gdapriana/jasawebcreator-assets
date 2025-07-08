@@ -1,0 +1,73 @@
+#_location-root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+#_location-root ._wrapper {
+  width: 100%;
+  padding: 0 7%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  #_location-root ._wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#_location-root ._wrapper ._card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 1rem;
+}
+#_location-root ._wrapper ._card ._image {
+  width: 100%;
+  border-radius: 2rem;
+}
+#_location-root ._wrapper ._card ._content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.4rem;
+}
+#_location-root ._wrapper ._card ._content ._title {
+  font-family: var(--primtext), sans-serif;
+  font-weight: 600;
+  color: var(--colors);
+}
+#_location-root ._wrapper ._card ._content ._location-pin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+#_location-root ._wrapper ._card ._content ._location-pin i {
+  font-size: 1.6rem;
+  color: var(--colors);
+}
+#_location-root ._wrapper ._card ._content ._location-pin ._location {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+#_location-root ._wrapper ._card ._content ._cta {
+  background-color: var(--colors);
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999em;
+  font-weight: 500;
+  font-family: var(--primtext), sans-serif;
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=location.css.map */

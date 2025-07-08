@@ -1,0 +1,190 @@
+@use 'lib' as v
+
+#pricing
+    width: 100%
+    padding: 3rem 0
+    position: relative
+    background-color: white
+    @include v.disflex()
+
+    ._pricing-wrapper
+        width: 80%
+        z-index: 2
+        @include v.disflex($direction: column, $justify: start, $items: stretch)
+        gap: 2rem
+
+        @media (min-width: 768px)
+            @include v.disflex($direction: row, $justify: center, $items: start)
+
+
+        ._pricing-header
+            @media (min-width: 768px)
+                flex: 0.4
+            @include v.disflex($direction: column, $justify: start, $items: start)
+            ._pricing-welcome
+                position: relative
+                padding: 2rem
+                
+                ._welcome-wavy
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                span
+                    color: var(--colors)
+                    font-weight: 600
+            ._pricing-title
+                font-weight: 700
+                line-height: 1.15
+                letter-spacing: -.02em
+                font-size: 30px
+                text-align: start 
+                @media (min-width: 768px)
+                    font-size: 54px
+            ._pricing-toggle-wrapper
+                margin-top: 1rem
+                @include v.disflex()
+                gap: .8rem
+
+                span
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 12px
+
+                ._pricing-toggle
+                    display: inline-block
+                    vertical-align: middle
+                    position: relative
+                    width: 70px
+                    height: 32px
+                    border-radius: 100px
+                    background-color: var(--colors)
+                    overflow: hidden
+                    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, .05)
+                    input
+                        position: absolute
+                        display: block
+                        cursor: pointer
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        opacity: 0
+                        z-index: 6
+                    ._toggle-switch
+                        position: absolute 
+                        left: 5px 
+                        top: 4px 
+                        bottom: 4px 
+                        right: 57.5% 
+                        background-color: #fff 
+                        border-radius: 36px 
+                        z-index: 1 
+                        transition: .25s cubic-bezier(.785,.135,.15,.86) 
+                        transition-property: left, right 
+                        transition-delay: 0s, .08s 
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, .2) 
+
+        ._pricing-content
+            display: grid
+            grid-template-columns: 1fr
+            gap: 1rem
+            grid-template-rows: repeat(2, auto)
+            @media (min-width: 768px)
+                flex: 0.6
+                grid-template-columns: repeat(2, 1fr)
+                grid-template-rows: auto
+
+            ._pricing-card
+                background-color: white
+                box-shadow: 0 25px 70px rgba(8,10,55,.08)
+                padding: 60px 30px
+                border-radius: 14px
+                @include v.disflex($direction: column, $justify: start, $items: start)
+                gap: 3rem
+
+                ._pricing-card-header
+                    @include v.disflex($justify: start, $direction: column, $items: start)
+                    gap: 1.6rem
+
+                    ._pricing-card-title
+                        font-size: 30px
+                        font-weight: 600
+                        line-height: 20px
+
+                ._pricing-list
+                    @include v.disflex($direction: column, $justify: start, $items: start)
+                    gap: .6rem
+
+                    ._pricing-l
+                        @include v.disflex($justify: start)
+                        gap: .6rem
+
+                        span
+                            color: var(--colors)
+
+                        p
+                            font-size: 18px
+                            color: var(--text-color2)
+                            font-weight: 500
+
+                        &:last-child
+                            color: gray
+                            span
+                                color: gray
+                            
+                ._pricing-card-price
+                    @include v.disflex($direction: column, $justify: start, $items: start)
+                    gap: .6rem
+
+                    ._pricing-card-p
+                        font-size: 34px
+                        font-weight: 600
+                        line-height: 34px
+
+                    ._pricing-card-desc
+                        font-size: 18px
+                        color: var(--text-color2)
+                    
+                ._pricing-card-cta
+                    background-color: var(--colors)
+                    cursor: pointer
+                    width: 100%
+                    text-align: center
+                    font-weight: 600
+                    font-size: 16px
+                    color: white
+                    padding: 17px 10px
+                    border-radius: 6px
+                    &:hover
+                        background-color: var(--colors)
+
+    ._pricing-elements
+        position: absolute
+        z-index: 1
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+
+        & > img
+            position: absolute
+            display: none
+            @media (min-width: 1000px) 
+                display: flex
+
+        ._element-1
+            bottom: 0
+            left: -150px
+
+        ._element-2
+            bottom: 250px
+            left: 400px
+
+        ._element-3
+            right: 100px
+            top: 50%
+            bottom: 50%
+            transform: translateY(-50%)
+

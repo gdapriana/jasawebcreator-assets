@@ -1,0 +1,166 @@
+#_seo {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#_seo ._seo-wrapper {
+  width: 100%;
+  padding: 0 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 6rem;
+}
+#_seo ._seo-wrapper ._seo-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  #_seo ._seo-wrapper ._seo-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+#_seo ._seo-wrapper ._seo-header ._seo-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  font-family: "Manrope", sans-serif;
+  color: #0E0B3D;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #_seo ._seo-wrapper ._seo-header ._seo-title {
+    text-align: left;
+    width: 70%;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1em;
+    letter-spacing: 0.5px;
+    font-family: "Manrope", sans-serif;
+    color: #0E0B3D;
+  }
+}
+#_seo ._seo-wrapper ._seo-header ._seo-description {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  color: rgba(14, 11, 61, 0.6509803922);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #_seo ._seo-wrapper ._seo-header ._seo-description {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    color: rgba(14, 11, 61, 0.6509803922);
+    text-align: left;
+    width: 30%;
+  }
+}
+#_seo ._seo-wrapper ._seo-content {
+  padding: 40px;
+  border-radius: 20px;
+  background-color: var(--e-global-color-f13ace2);
+  border: 1px solid rgba(14, 11, 61, 0.1490196078);
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, auto);
+}
+@media (min-width: 1000px) {
+  #_seo ._seo-wrapper ._seo-content {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+  }
+}
+#_seo ._seo-wrapper ._seo-content ._seo-card {
+  background-color: white;
+  padding: 2rem;
+  transition: all ease-in-out 0.3s;
+  border-radius: 10px;
+  border: 1px solid #eaeaeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+#_seo ._seo-wrapper ._seo-content ._seo-card:hover {
+  transform: translateY(-10px);
+}
+#_seo ._seo-wrapper ._seo-content ._seo-card ._card-icon {
+  width: 64px;
+}
+#_seo ._seo-wrapper ._seo-content ._seo-card ._card-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  font-family: "Manrope", sans-serif;
+  color: #0E0B3D;
+  text-align: center;
+  color: var(--e-global-color-primary);
+}
+@media (min-width: 1000px) {
+  #_seo ._seo-wrapper ._seo-content ._seo-card ._card-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1em;
+    letter-spacing: 0;
+    font-family: "Manrope", sans-serif;
+    color: #0E0B3D;
+  }
+}
+#_seo ._seo-wrapper ._seo-content ._seo-card ._card-desc {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  color: rgba(14, 11, 61, 0.6509803922);
+  text-align: center;
+}
+#_seo ._seo-wrapper ._seo-content ._seo-card:nth-child(3) {
+  background-color: transparent;
+  background-image: linear-gradient(45deg, #146EF5 40%, #429AFF 100%);
+}
+@media (min-width: 1000px) {
+  #_seo ._seo-wrapper ._seo-content ._seo-card:nth-child(3) {
+    margin: -70px 0;
+  }
+}
+#_seo ._seo-wrapper ._seo-content ._seo-card:nth-child(3) ._img-wrapper {
+  border: 1px solid white;
+  padding: 1rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 999em;
+}
+#_seo ._seo-wrapper ._seo-content ._seo-card:nth-child(3) ._card-title {
+  color: white;
+}
+#_seo ._seo-wrapper ._seo-content ._seo-card:nth-child(3) ._card-desc {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*# sourceMappingURL=seo.css.map */

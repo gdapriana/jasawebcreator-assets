@@ -1,0 +1,158 @@
+@use 'lib' as v
+
+#_footer
+    position: relative
+    widows: 100%
+    margin-top: 10rem
+    padding: 4rem 0
+    background-color: #050620
+    @include v.disflex($d: column, $j: start, $i: stretch)
+
+    ._footer-wrapper
+        width: 100%
+        padding: 0 7%
+        @include v.disflex($d: column, $j: start, $i: stretch, $g: 3rem)
+
+        ._footer-header
+            margin-top: -150px
+            position: relative
+            @include v.disflex()
+            background-color: #CBF8FF
+            // padding: 40px
+            border-radius: 20px
+
+            ._elements
+                position: absolute
+                width: 100%
+                height: 100%
+                z-index: 1
+
+                ._element
+                    position: absolute
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    border-radius: 20px
+                    @media (min-width: 1000px)
+                        left: 0
+                        width: 50%
+
+            ._header-content
+                z-index: 2
+                width: 100%
+                @include v.disflex($i: stretch)
+
+                ._left
+                    position: relative
+                    display: none
+                    @media (min-width: 1000px)
+                        @include v.disflex()
+                        width: 40%
+
+                    ._element-2
+                        position: absolute
+                        bottom: 0
+                        left: 50%
+                        right: 50%
+                        width: 331px
+                        transform: translateX(-50%)
+
+                ._right
+                    width: 100%
+                    padding: 40px
+                    @include v.disflex($d: column, $j: start, $i: start, $g: 1.6rem)
+                    @media (min-width: 1000px)
+                        width: 60%
+
+                    ._header-right-title
+                        font-size: 40px
+                        font-family: var(--e-global-typography-primary-font-family)
+                        font-weight: 600
+                        color: var(--e-global-color-primary)
+
+                    ._header-right-desc
+                        @include v.subtext()
+                        color: rgba(0, 0, 0, 0.5)
+                        font-size: 16px
+                        line-height: 1.4
+
+                    ._cta
+                        border-radius: 999em
+                        border: 1px solid var(--e-global-color-secondary)
+                        padding: 4px
+                        @include v.disflex()
+
+                        span
+                            padding: 16px 40px
+                            color: white
+                            background-color: var(--e-global-color-secondary)
+                            border-radius: 999em
+
+
+        ._footer-content
+            @include v.disflex($d:column, $j: start, $i:stretch, $g: 3rem)
+            @media (min-width: 1000px)
+                @include v.disflex($d:row, $j: center, $i: start)
+
+            ._footer-section
+                @include v.disflex($d: column, $j: start, $i: start)
+                @media (min-width: 1000px)
+                    flex: 1
+
+                ._footer-section-title
+                    font-family: var(--e-global-typography-primary-font-family)
+                    font-size: 20px
+                    color: white
+                    font-weight: 500
+
+                ._footer-section-add
+                    @include v.disflex($d: column, $j: start, $i: start)
+
+                    ._add-phone, ._add-email
+                        color: rgba(255, 255, 255, 0.5)
+
+                        i
+                            color: var(--e-global-color-secondary)
+                        span
+                            color: white
+
+                    ._add-socials
+                        width: 100%
+                        padding: 1rem 0
+                        border-top: 1px solid rgba(255,255,255,0.1)
+                        @include v.disflex($j: start)
+
+                        ._social
+                            @include v.disflex()
+                            padding: 10px
+                            border-radius: 999em
+                            background-color: rgba(255, 255, 255, 0.5)
+                            color: white
+                            @include v.trans()
+
+                            &:hover
+                                background-color: white
+                                color: var(--e-global-color-secondary)
+
+
+                ._footer-section-list
+                    @include v.disflex($d: column, $j: start, $i: start)
+                    ._link
+                        color: rgba(255, 255, 255, 0.5)
+                        font-size: 16px
+
+        ._footer-footer
+            @include v.disflex($d: column, $j: center, $i: center)
+            @media (min-width: 1000px)
+                @include v.disflex($d: row, $j: space-between, $i: center)
+                color: rgba(255, 255, 255, 0.5)
+
+            ._left
+                @include v.disflex($d: row, $j: center, $i: center)
+
+                img
+                    width: 135px
+
+
+

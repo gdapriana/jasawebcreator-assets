@@ -1,0 +1,94 @@
+@use 'lib' as v
+
+#_seo
+    width: 100%
+    padding: 4rem 0
+    background-color: white
+    @include v.disflex()
+
+    ._seo-wrapper
+        width: 100%
+        padding: 0 7%
+        @include v.disflex($d: column, $j: start, $i: stretch, $g: 6rem)
+        
+        ._seo-header
+            @include v.disflex($d: column, $j: start, $i: stretch)
+            @media (min-width: 768px)
+                @include v.disflex($d: row, $j: center, $i: center)
+
+            ._seo-title
+                @include v.heading()
+                text-align: center
+                @media (min-width: 768px)
+                    text-align: left
+                    width: 70%
+                    @include v.heading($fs: 64px)
+
+            ._seo-description
+                @include v.subtext()
+                text-align: center
+                @media (min-width: 768px)
+                    @include v.subtext($fs: 16px)
+                    text-align: left
+                    width: 30%
+
+        ._seo-content
+            padding: 40px
+            border-radius: 20px
+            background-color: var(--e-global-color-f13ace2)
+            border: 1px solid #0E0B3D26
+            position: relative
+            @include v.disgrid($r: 4, $sr: auto, $c: 1)
+            @media (min-width: 1000px)
+                @include v.disgrid($r: 1, $sr: auto, $c: 4)
+
+            ._seo-card
+                background-color: white
+                padding: 2rem
+                @include v.trans()
+                border-radius: 10px
+                border: 1px solid #eaeaeb
+                @include v.disflex($d: column, $j: center, $i: center, $g: 2rem)
+
+                &:hover
+                    transform: translateY(-10px)
+
+                    
+
+                ._card-icon
+                    width: 64px
+
+                ._card-title
+                    @include v.heading($fs: 20px)
+                    text-align: center
+                    color: var(--e-global-color-primary)
+                    @media (min-width: 1000px)
+                        @include v.heading($fs: 24px, $ls: 0)
+
+                ._card-desc
+                    @include v.subtext($fs: 16px)
+                    text-align: center
+
+
+                &:nth-child(3)
+                    @include v.gradback
+                    @media (min-width: 1000px)
+                        margin: -70px 0
+
+                    ._img-wrapper
+                        border: 1px solid white
+                        padding: 1rem
+                        aspect-ratio: 1/1
+                        @include v.disflex()
+                        background-color: rgba(255, 255, 255, 0.1)
+                        border-radius: 999em 
+
+                    
+                    ._card-title
+                        color: white
+
+                    ._card-desc
+                        color: rgba(255, 255, 255, 0.5)
+
+
+

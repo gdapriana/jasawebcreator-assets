@@ -1,0 +1,26 @@
+@use 'lib' as v
+
+#_footer
+  width: 100%
+  @include v.flx($d: column, $j: start, $i: stretch, $g: 0)
+  padding: 100px 0
+  background-color: white
+
+  ._footer-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column)
+
+    ._desc
+      @include v.subtext()
+      text-align: center
+
+    ._links
+      @include v.flx()
+
+      ._link
+        color: var(--blue-col)
+
+        &:hover
+          color: var(--green-col)
+          text-decoration: underline

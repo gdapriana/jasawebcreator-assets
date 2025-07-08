@@ -1,0 +1,241 @@
+#pricing {
+  width: 100%;
+  padding: 3rem 0;
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#pricing ._pricing-wrapper {
+  width: 80%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  #pricing ._pricing-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+  }
+}
+#pricing ._pricing-wrapper ._pricing-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+@media (min-width: 768px) {
+  #pricing ._pricing-wrapper ._pricing-header {
+    flex: 0.4;
+  }
+}
+#pricing ._pricing-wrapper ._pricing-header ._pricing-welcome {
+  position: relative;
+  padding: 2rem;
+}
+#pricing ._pricing-wrapper ._pricing-header ._pricing-welcome ._welcome-wavy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#pricing ._pricing-wrapper ._pricing-header ._pricing-welcome span {
+  color: var(--colors);
+  font-weight: 600;
+}
+#pricing ._pricing-wrapper ._pricing-header ._pricing-title {
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-size: 30px;
+  text-align: start;
+}
+@media (min-width: 768px) {
+  #pricing ._pricing-wrapper ._pricing-header ._pricing-title {
+    font-size: 54px;
+  }
+}
+#pricing ._pricing-wrapper ._pricing-header ._pricing-toggle-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+#pricing ._pricing-wrapper ._pricing-header ._pricing-toggle-wrapper span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 12px;
+}
+#pricing ._pricing-wrapper ._pricing-header ._pricing-toggle-wrapper ._pricing-toggle {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 70px;
+  height: 32px;
+  border-radius: 100px;
+  background-color: var(--colors);
+  overflow: hidden;
+  box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.05);
+}
+#pricing ._pricing-wrapper ._pricing-header ._pricing-toggle-wrapper ._pricing-toggle input {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 6;
+}
+#pricing ._pricing-wrapper ._pricing-header ._pricing-toggle-wrapper ._pricing-toggle ._toggle-switch {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  bottom: 4px;
+  right: 57.5%;
+  background-color: #fff;
+  border-radius: 36px;
+  z-index: 1;
+  transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-property: left, right;
+  transition-delay: 0s, 0.08s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+#pricing ._pricing-wrapper ._pricing-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  grid-template-rows: repeat(2, auto);
+}
+@media (min-width: 768px) {
+  #pricing ._pricing-wrapper ._pricing-content {
+    flex: 0.6;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card {
+  background-color: white;
+  box-shadow: 0 25px 70px rgba(8, 10, 55, 0.08);
+  padding: 60px 30px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 3rem;
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.6rem;
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-card-header ._pricing-card-title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 20px;
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.6rem;
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-list ._pricing-l {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.6rem;
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-list ._pricing-l span {
+  color: var(--colors);
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-list ._pricing-l p {
+  font-size: 18px;
+  color: var(--text-color2);
+  font-weight: 500;
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-list ._pricing-l:last-child {
+  color: gray;
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-list ._pricing-l:last-child span {
+  color: gray;
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-card-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.6rem;
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-card-price ._pricing-card-p {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 34px;
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-card-price ._pricing-card-desc {
+  font-size: 18px;
+  color: var(--text-color2);
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-card-cta {
+  background-color: var(--colors);
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  padding: 17px 10px;
+  border-radius: 6px;
+}
+#pricing ._pricing-wrapper ._pricing-content ._pricing-card ._pricing-card-cta:hover {
+  background-color: var(--colors);
+}
+#pricing ._pricing-elements {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#pricing ._pricing-elements > img {
+  position: absolute;
+  display: none;
+}
+@media (min-width: 1000px) {
+  #pricing ._pricing-elements > img {
+    display: flex;
+  }
+}
+#pricing ._pricing-elements ._element-1 {
+  bottom: 0;
+  left: -150px;
+}
+#pricing ._pricing-elements ._element-2 {
+  bottom: 250px;
+  left: 400px;
+}
+#pricing ._pricing-elements ._element-3 {
+  right: 100px;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=pricing.css.map */

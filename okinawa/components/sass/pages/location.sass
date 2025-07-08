@@ -1,0 +1,51 @@
+@use "../lib" as v
+
+#_location-root
+  width: 100%
+  @include v.flx($d: column, $g: 2rem)
+  @include v.sectionPad()
+
+  ._wrapper
+    width: 100%
+    @include v.pad()
+    display: grid
+    gap: 2rem
+    grid-template-columns: 1fr
+    @media (min-width: v.$sminimumres)
+      grid-template-columns: repeat(2, 1fr)
+
+    ._card
+      @include v.flx($d: column, $j: start, $i: stretch, $g: 1rem)
+
+      ._image
+        width: 100%
+        border-radius: 2rem
+
+      ._content
+        @include v.flx($d: column, $j: start, $i: start, $g: .4rem)
+
+        ._title
+          font-family: var(--primtext), sans-serif
+          font-weight: 600
+          color: var(--colors)
+
+        ._location-pin
+          @include v.flx($g: .6rem)
+          i
+            font-size: 1.6rem
+            color: var(--colors)
+          ._location
+            padding: 0
+            margin: 0
+            font-size: v.$textbase
+
+
+        ._cta
+          background-color: var(--colors)
+          color: white
+          text-decoration: none
+          padding: .6rem 1.2rem
+          border-radius: 999em
+          font-weight: 500
+          font-family: var(--primtext), sans-serif
+          margin-top: 1rem

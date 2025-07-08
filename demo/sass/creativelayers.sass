@@ -1,0 +1,194 @@
+@use 'lib' as v
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap')
+
+:root
+  --primtext: "Jost", sans-serif
+  --subtext: "Jost", sans-serif
+  --res-sm: 640px
+  --res-md: 768px
+  --res-lg: 1024px
+  --res-xl: 1280px
+  --res-xxl: 1536px
+
+#_header-root *
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  color: white !important
+
+.container-global
+  padding-left: 7% !important
+  padding-right: 7% !important
+
+body
+  font-family: "Jost", sans-serif
+
+#_header-root
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 9999
+
+
+  ._header-wrapper
+    padding-top: 1rem
+    padding-bottom: 1rem
+    @include v.disflex($justify: space-between)
+    gap: 3rem
+
+    ._header-hamburger
+      @include v.disflex()
+      cursor: pointer
+      gap: 1rem
+      font-family: var(--subtext), sans-serif
+      & i
+        font-size: 2rem
+      & span
+        display: none
+        @media (min-width: v.$lg)
+          display: inline
+
+
+    ._header-brand
+      margin: 0 auto
+      img
+        width: 140px
+        object-fit: cover
+
+    ._header-whatsapp
+      display: none
+      font-family: var(--subtext), sans-serif
+      @media (min-width: v.$lg)
+        @include v.disflex()
+        gap: .6rem
+
+    ._header-book-btn
+      display: none
+      border: 1px solid white
+      padding: .6rem 1rem
+      text-decoration: none
+      font-size: 16px
+      font-family: var(--subtext), sans-serif
+      @media (min-width: v.$lg)
+        display: flex
+        font-size: 20px
+
+
+
+
+#_hamburger-content
+  position: fixed
+  left: 0
+  width: 100%
+  height: 100vh
+  top: -150%
+  background-color: white
+  z-index: 99999
+  overflow: hidden
+  background-size: cover
+  background-attachment: fixed
+  background-repeat: no-repeat
+  @include v.disflex($direction: column, $justify: start, $align: stretch)
+
+  ._hamburger-content-wrapper
+    z-index: 3
+    position: relative
+    height: 100%
+    @include v.disflex($align: stretch)
+
+    ._content-left
+      overflow: auto
+      flex: 1
+      padding: clamp(3rem, 3vw, 8rem)
+      gap: 4rem
+      @include v.disflex($direction: column, $justify: start, $align: stretch)
+      @media (min-width: v.$lg)
+        flex: 0.5
+      ._hamburger-close-btn
+        margin-right: auto
+        text-transform: uppercase
+        background-color: transparent
+        color: white
+        box-shadow: none
+        border: none
+        @include v.disflex()
+        gap: .8rem
+        font-size: 16px
+        font-family: var(--primtext), sans-serif
+        @media (min-width: v.$lg)
+          font-size: 24px
+      ._hamburger-links-wrapper
+        gap: 2rem
+        margin-left: 1.8rem
+        @media (min-width: v.$lg)
+          margin-left: 2.2rem
+        @include v.disflex($direction: column, $justify: start, $align: start)
+
+        ._link-wrapper
+          overflow: hidden
+          padding-top: .4rem
+          padding-bottom: .4rem
+          gap: 1.6rem
+          @include v.disflex($direction: column, $justify: start, $align: start)
+
+          ._link
+            text-decoration: none
+            color: white
+            font-size: 2rem
+            font-weight: 300
+            padding: .1rem 0
+            font-family: var(--primtext), sans-serif
+            transform: translateY(100%)
+
+          ._hamburger-sub-links-wrapper
+            margin-left: 2rem
+            flex-direction: column
+            opacity: 0
+            display: none
+            gap: 1rem
+
+            ._sub-link-wrapper
+              ._sub-link
+                color: white
+                @include v.disflex()
+                gap: 1rem
+                text-decoration: none
+                font-size: 16px
+                font-family: "Jost", sans-serif
+                @media (min-width: v.$lg )
+                  font-size: 20px
+
+
+    ._content-right
+      flex: 1
+      background-color: #F9DABA
+      display: none
+      padding: 4rem
+      @media (min-width: v.$lg)
+        @include v.disflex($direction: column, $justify: space-evenly, $align: center)
+        flex: 0.5
+
+    ._content-right *
+      padding: 0
+      margin: 0
+      letter-spacing: 0
+
+    ._content-right div
+      @include v.disflex($direction: column, $justify: center, $align: center)
+      gap: .4rem
+
+      & h4
+        font-size: 1.8rem
+        font-family: var(--primtext), sans-serif
+        color: rgba(0, 0, 0, 0.7)
+
+
+  ._hamburger-content-background-overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.7)
+    z-index: 2

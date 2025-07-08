@@ -1,0 +1,38 @@
+@use 'lib' as v
+
+#_gallery
+  width: 100%
+  @include v.flx($d: column, $g: 10rem)
+  padding: 100px 0
+
+  ._header
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column)
+
+    ._title
+      @include v.heading()
+
+    ._desc
+      @include v.subtext()
+      max-width: 800px
+      text-align: center
+
+  ._content
+    position: relative
+    @include v.flx()
+    width: 100%
+
+    ._phone
+      position: absolute
+      z-index: 2
+
+    ._content-slide
+      z-index: 1
+      width: 100%
+      ._screen-card
+        @include v.flx()
+        ._screen
+          width: 300px
+          box-shadow: 0 0 22px 3px whitesmoke
+

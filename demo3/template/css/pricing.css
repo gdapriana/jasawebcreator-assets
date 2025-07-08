@@ -1,0 +1,211 @@
+#_pricing {
+  width: 100%;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+}
+#_pricing ._pricing-wrapper {
+  width: 100%;
+  padding: 0 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 4rem;
+}
+#_pricing ._pricing-wrapper ._pricing-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  #_pricing ._pricing-wrapper ._pricing-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+#_pricing ._pricing-wrapper ._pricing-header ._pricing-pill-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  #_pricing ._pricing-wrapper ._pricing-header ._pricing-pill-title {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+  }
+}
+#_pricing ._pricing-wrapper ._pricing-header ._pricing-pill-title ._pricing-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  font-family: "Manrope", sans-serif;
+  color: #0E0B3D;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #_pricing ._pricing-wrapper ._pricing-header ._pricing-pill-title ._pricing-title {
+    width: 70%;
+    text-align: left;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1em;
+    letter-spacing: 0.5px;
+    font-family: "Manrope", sans-serif;
+    color: #0E0B3D;
+  }
+}
+#_pricing ._pricing-wrapper ._pricing-header ._pricing-description {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  color: rgba(14, 11, 61, 0.6509803922);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #_pricing ._pricing-wrapper ._pricing-header ._pricing-description {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    color: rgba(14, 11, 61, 0.6509803922);
+    text-align: left;
+    width: 30%;
+  }
+}
+#_pricing ._pricing-wrapper ._pricing-content {
+  padding: 40px;
+  border-radius: 20px;
+  background-color: var(--e-global-color-f13ace2);
+  border: 1px solid rgba(14, 11, 61, 0.1490196078);
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+@media (min-width: 1000px) {
+  #_pricing ._pricing-wrapper ._pricing-content {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+  }
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card {
+  background-color: white;
+  transition: all ease-in-out 0.3s;
+  padding-top: 2rem;
+  border-radius: 10px;
+  border: 1px solid #eaeaeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card:last-child {
+  position: relative;
+  margin-top: 3rem;
+  background-color: transparent;
+  background-image: linear-gradient(45deg, #146EF5 40%, #429AFF 100%);
+}
+@media (min-width: 1000px) {
+  #_pricing ._pricing-wrapper ._pricing-content ._pricing-card:last-child {
+    margin: -60px 0;
+  }
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card:last-child ._price-element {
+  display: flex;
+  position: absolute;
+  top: -10%;
+  padding: 20px;
+  border-radius: 999em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card:last-child ._price-element img {
+  width: 54px;
+  aspect-ratio: 1/1;
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card:last-child ._price, #_pricing ._pricing-wrapper ._pricing-content ._pricing-card:last-child ._plan, #_pricing ._pricing-wrapper ._pricing-content ._pricing-card:last-child ._price span {
+  color: white;
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card:last-child ._price-cta {
+  border: 1px solid black;
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card:last-child ._price-cta span {
+  background-color: black;
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card:hover {
+  transform: translateY(-10px);
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card ._price-element {
+  display: none;
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card ._price {
+  font-size: 40px;
+  color: var(--e-global-color-secondary);
+  font-weight: 700;
+  font-family: var(--e-global-typography-primary-font-family);
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card ._price span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.2);
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card ._plan {
+  font-family: var(--e-global-typography-primary-font-family);
+  color: var(--e-global-color-primary);
+  font-size: 22px;
+  font-weight: 500;
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card ._price-cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 4px;
+  border-radius: 999em;
+  border: 1px solid var(--e-global-color-secondary);
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card ._price-cta span {
+  background-color: var(--e-global-color-secondary);
+  border-radius: 999em;
+  padding: 14px 36px;
+  color: white;
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card ._price-add {
+  border: 1px solid #CFBFFD;
+  background-color: #FCFCFF;
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.4rem;
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card ._price-add i {
+  color: var(--e-global-color-secondary);
+}
+#_pricing ._pricing-wrapper ._pricing-content ._pricing-card ._price-add p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=pricing.css.map */

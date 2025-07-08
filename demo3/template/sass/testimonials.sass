@@ -1,0 +1,68 @@
+@use 'lib' as v
+
+#_testimonials
+    width: 100%
+    padding: 4rem 0
+    @include v.disflex()
+    background-color: #050620
+
+    ._testimonials-wrapper
+        width: 100%
+        padding: 0 7%
+        @include v.disflex($d: column, $i: stretch, $j: start, $g: 3rem)
+
+        ._testimonials-header
+            @include v.disflex($d: column, $j: start, $i: center)
+
+            ._testimonials-title
+                text-align: center
+                @include v.heading($cl: #fff)
+                @media (min-width: 1000px)
+                    @include v.heading($fs: 64px, $cl: #fff)
+
+            ._testimonials-desc
+                @include v.subtext($cl: #FFFFFFA6)
+                width: 100%
+                max-width: 600px
+                text-align: center
+                @media (min-width: 1000px)
+                    @include v.subtext($fs: 16px, $cl: #FFFFFFA6)
+
+        ._testimonials-content
+            ._testi-card
+                border: 1px solid rgba(255, 255, 255, 0.2)
+                margin-right: 2rem
+                padding: 40px
+                border-radius: 10px
+                background-color: #FFFFFF0D
+                color: rgba(255, 255, 255, 0.5)
+                @include v.disflex($d: column, $j: start, $i: start, $g: 1.6rem)
+
+                ._testi-message
+                    @include v.subtext($cl: rgba(255,255,255,0.5))
+                    line-height: 1.5
+
+                ._testi-stars
+                    i
+                        color: orange
+
+                ._testi-user
+                    @include v.disflex($j: start)
+
+                    ._user-img-wrapper
+                        @include v.disflex()
+                        border: 1px solid rgba(255, 255, 255, 0.4)
+                        padding: 4px
+                        border-radius: 999em
+                        img
+                            border-radius: 999em
+                            width: 50px
+                    
+                    ._user-name
+                        font-size: 18px
+                        color: rgba(255, 255, 255, 0.9)
+                    ._user-as
+                        font-size: 14px
+
+
+

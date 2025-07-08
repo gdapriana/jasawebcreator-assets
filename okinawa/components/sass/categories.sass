@@ -1,0 +1,153 @@
+@use "lib" as v
+
+#_categories-root
+  width: 100%
+  @include v.flx()
+  @include v.sectionPad()
+
+  *
+    padding: 0
+    margin: 0
+
+  ._wrapper
+    width: 100%
+    @include v.flx($d: column, $g: 2rem)
+    @include v.pad()
+
+    ._header
+      @include v.headerTemplate()
+
+    ._content-desktop
+      display: grid
+      grid-template-columns: 1fr
+      gap: 1rem
+
+      @media (min-width: v.$sminimumres)
+        grid-template-columns: repeat(2, 1fr)
+
+      @media (min-width: v.$minimumres)
+        grid-template-columns: repeat(4, 1fr)
+
+      ._card
+        box-shadow: 0 2px 3px -1px rgba(0,0,0,0.01), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)
+        text-decoration: none
+        @include v.flx($d: column, $g: .4rem)
+        text-align: center
+        border-radius: 1rem
+        @include v.trans()
+        padding: 2rem
+
+        ._icon
+          background: linear-gradient(135deg, #fef2f2, #fee2e2)
+          font-size: 3rem
+          @include v.flx()
+          width: 80px
+          @include v.trans()
+          border-radius: 1rem
+          aspect-ratio: 1/1
+          border: 2px solid #fab1b1
+
+        ._title
+          font-family: var(--primtext), sans-serif
+          color: rgba(0, 0, 0, .9)
+          @include v.trans()
+          margin-top: 1rem
+
+        ._description
+          color: rgba(0, 0, 0, .5)
+          font-family: var(--primtext), sans-serif
+          font-size: v.$textsm
+
+        ._total
+          @include v.flx()
+          color: rgba(0, 0, 0, .5)
+          margin-top: 1rem
+          @include v.trans()
+          font-size: v.$textsm
+          background-color: rgba(0, 0, 0, .1)
+          border-radius: 999em
+          padding: .2rem .8rem
+
+        &:hover
+          transform: translateY(-10px)
+          box-shadow: 0 25px 50px -12px rgba(194, 16, 30, 0.25)
+          border-top: 4px solid var(--colors)
+
+          ._icon
+            background: var(--colors)
+            border-color: var(--colors)
+            transform: scale(1.1) rotate(5deg)
+
+          ._title
+            color: var(--colors)
+
+          ._total
+            color: white
+            background-color: var(--colors)
+
+    ._content-desktop
+      display: none
+      @media (min-width: v.$minimumres)
+        display: grid
+
+    ._content-mobile
+      width: 100%
+      display: flex
+      @media (min-width: v.$minimumres)
+        display: none
+
+
+      ._card
+        text-decoration: none
+        @include v.flx($d: column, $g: .4rem)
+        text-align: center
+        border-radius: 1rem
+        @include v.trans()
+        padding: 2rem
+        border: 1px solid rgba(0, 0, 0, 0.05)
+        margin: 0 10px
+
+        ._icon
+          background: linear-gradient(135deg, #fef2f2, #fee2e2)
+          font-size: 3rem
+          @include v.flx()
+          width: 80px
+          @include v.trans()
+          border-radius: 1rem
+          aspect-ratio: 1/1
+          border: 2px solid #fab1b1
+
+        ._title
+          font-family: var(--primtext), sans-serif
+          color: rgba(0, 0, 0, .9)
+          @include v.trans()
+          margin-top: 1rem
+
+        ._description
+          color: rgba(0, 0, 0, .5)
+          font-family: var(--primtext), sans-serif
+          font-size: v.$textsm
+
+        ._total
+          @include v.flx()
+          color: rgba(0, 0, 0, .5)
+          margin-top: 1rem
+          @include v.trans()
+          font-size: v.$textsm
+          background-color: rgba(0, 0, 0, .1)
+          border-radius: 999em
+          padding: .2rem .8rem
+
+        &:hover
+
+          ._icon
+            background: var(--colors)
+            border-color: var(--colors)
+            transform: scale(1.1) rotate(5deg)
+
+          ._title
+            color: var(--colors)
+
+          ._total
+            color: white
+            background-color: var(--colors)

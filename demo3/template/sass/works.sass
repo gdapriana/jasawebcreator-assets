@@ -1,0 +1,66 @@
+@use 'lib' as v
+
+#_works
+  width: 100%
+  padding: 4rem 0
+  @include v.disflex()
+  background-color: white
+
+  ._works-wrapper
+    width: 100%
+    padding: 0 7%
+    @include v.disflex($d: column, $i: stretch, $j: start, $g: 4rem)
+
+    ._works-header
+      @include v.disflex($d: column, $j: start, $i: stretch)
+      @media (min-width: 768px)
+        @include v.disflex($d: row, $j: center, $i: center)
+
+      ._works-pill-title
+        @include v.disflex($d: column, $j:start, $i: center)
+        @media (min-width: 768px)
+          width: 70%
+          @include v.disflex($d: column, $j:start, $i: start)
+        ._works-title
+          @include v.heading()
+          text-align: center
+          @media (min-width: 768px)
+            width: 70%
+            text-align: left
+            @include v.heading($fs: 64px)
+
+      ._works-description
+        @include v.subtext()
+        text-align: center
+        @media (min-width: 768px)
+          @include v.subtext($fs: 16px)
+          text-align: left
+          width: 30%
+
+
+    ._works-content
+      width: 100%
+      @include v.disflex()
+
+      .slick-slide
+        margin: 0 27px
+
+      .slick-list
+        margin: 0 -27px
+
+      ._work-card
+        @include v.disflex($d: column, $j: start, $i: start)
+
+        ._work-card-image
+          width: 100%
+
+        ._work-card-desc
+          font-size: 16px
+          font-weight: 300
+          color: rgba(0,0,0,0.5)
+
+        ._work-card-title
+          font-size: 20px
+          font-weight: 500
+          color: var(--e-global-color-text)
+

@@ -1,0 +1,188 @@
+@use 'lib' as v
+
+:root 
+    --colors: #4260ff
+    --bodycol: #F4F5F9
+    --bodycol2: #6c6e76
+    --text-color: #271d3a
+    --text-color2: #565764
+    --primtext: "Urbanist", sans-serif
+
+body 
+    font-family: var(--primtext)
+    color: var(--text-color)
+
+
+a 
+    text-decoration: none 
+    color: var(--text-color) 
+
+
+* 
+    padding: 0 
+    margin: 0 
+    box-sizing: border-box 
+
+
+.container-global 
+    padding-left: 7% 
+    padding-right: 7% 
+
+
+#slider
+    width: 100%
+    position: relative
+    @include v.disflex()
+    background-color: var(--bodycol)
+    height: 700px
+
+    ._slider-content
+        z-index: 3
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        padding: 0 1rem
+        height: 100%
+        @media (min-width: 768px)
+            transform: translateY(-100px)
+        @include v.disflex()
+
+        ._slider-content-wrapper
+            @include v.disflex($direction: column, $justify: start, $items: center)
+            gap: 0.8rem
+
+            ._slider-welcome
+                position: relative
+                padding: 2rem
+                
+                ._welcome-wavy
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+
+                span
+                    color: var(--colors)
+                    font-weight: 600
+
+            ._slider-greeting
+                text-align: center
+                font-size: 38px
+                width: 100%
+                line-height: 1
+                max-width: 750px
+                font-weight: 700
+                background-size: 150% 150%
+                -webkit-text-fill-color: transparent
+                background-clip: text
+                padding-bottom: 10px
+                background-image: linear-gradient(291.09deg,#ff4f99 27.31%,#7f37fe 73.17%)
+                animation: slider 3s ease-in-out 1s infinite alternate forwards
+                @media (min-width: 768px)
+                    font-size: 100px
+
+
+            ._slider-subgreeting
+                text-align: center
+                font-size: 16px
+                line-height: 26px
+                color: var(--bodycol2)
+                letter-spacing: .02em
+
+            ._slider-form
+                padding: .4rem
+                display: grid
+                background-color: white
+                margin-top: 1.4rem
+                width: 100%
+                border-radius: 12px
+                max-width: 1000px
+                border: 1px solid rgba(0, 0, 0, 0.1)
+                grid-template-columns: 1fr
+                grid-template-rows: repeat(3, auto)
+                @media (min-width: 768px)
+                    grid-template-columns: 1.2fr 1.2fr 1fr
+                    padding-left: 2rem
+                    grid-template-rows: auto
+                    gap: 1rem
+
+                & > div
+                    width: 100%
+                    padding: 1rem
+                    @include v.disflex()
+                    gap: .8rem
+                    input
+                        flex: 1
+                        background-color: transparent
+                        border: none
+                        outline: none
+                        font-size: 16px
+                    
+                    
+                button
+                    padding: 1rem 1.8rem
+                    background-color: var(--colors)
+                    border: none
+                    outline: none
+                    color: white
+                    border-radius: 8px
+                    font-size: 16px
+                    font-weight: 600
+                
+    ._slider-wave
+        position: absolute
+        z-index: 2
+        left: 0
+        bottom: 0
+        width: 100%
+
+    ._slider-elements
+        position: absolute
+        z-index: 1
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+
+        img
+            position: absolute
+            display: none
+            @media (min-width: 768px)
+                display: flex
+
+        ._element-speaker
+            right: 0
+            bottom: 200px
+
+        ._element-dart
+            right: 50%
+            left: 50%
+            top: 60%
+            bottom: 40%
+            transform: translate(-50%, -50%)
+
+        ._element-people
+            bottom: 250px
+            left: 150px
+
+        ._element-coconut
+            bottom: 300px
+            left: 50px
+
+        ._element-dna
+            top: 150px
+            left: 150px
+
+
+@media (min-width: 768px)
+    #slider
+        height: 1000px
+
+@keyframes slider
+    0%
+        background-position: 0
+    100%
+        background-position: 100%
+        

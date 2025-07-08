@@ -1,0 +1,69 @@
+@use "lib" as v
+
+#_footer-root
+  width: 100%
+  border-top: 1px solid rgba(0, 0, 0, 0.1)
+  @include v.flx()
+  @include v.sectionPad()
+  padding-bottom: 6rem
+
+  ._wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: start, $g: 2rem)
+    @media (min-width: v.$minimumres)
+      @include v.flx($d: row, $i: start, $g: 2rem)
+
+      ._header
+        width: 40%
+
+      ._section
+        width: 20%
+
+
+    ._header
+      @include v.flx($d: column, $i: start, $j: start, $g: 1rem)
+
+      ._brand
+        img
+          width: clamp(200px, 2vw, 300px)
+
+      ._description
+        color: rgba(0, 0, 0, 0.5)
+        font-family: var(--primtext), sans-serif
+
+      ._socials
+        @include v.flx($g: .4rem)
+        ._social
+          color: white
+          text-decoration: none
+          background-color: var(--colors)
+          width: 35px
+          aspect-ratio: 1/1
+          border-radius: 999em
+          @include v.flx()
+
+    ._section
+      @include v.flx($d: column, $j: start, $i: start, $g: 1rem)
+
+      ._title
+        font-family: var(--primtext), sans-serif
+
+      ._navs
+        @include v.flx($d: column, $j: start, $i: start, $g: .4rem)
+
+        ._nav
+          font-family: var(--primtext), sans-serif
+          color: rgba(0, 0, 0, 0.8)
+          text-decoration: none
+
+
+._copyright
+  @include v.flx()
+  padding: 1rem
+  border-top: 1px solid rgba(0, 0, 0, 0.1)
+
+  ._copyright-text
+    font-family: var(--primtext), sans-serif
+    color: rgba(0, 0, 0, 0.5)
+

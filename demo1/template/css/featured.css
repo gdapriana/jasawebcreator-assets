@@ -1,0 +1,167 @@
+.slick-slide {
+  margin: 0 16px;
+}
+
+.slick-list {
+  margin: 0 -16px;
+}
+
+#featured {
+  padding: 2rem 1rem;
+  width: 100%;
+  gap: 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+#featured ._featured-header {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+#featured ._featured-header ._featured-welcome {
+  position: relative;
+  padding: 2rem;
+}
+#featured ._featured-header ._featured-welcome ._welcome-wavy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#featured ._featured-header ._featured-welcome span {
+  color: var(--colors);
+  font-weight: 600;
+}
+#featured ._featured-header ._featured-title-arrow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+#featured ._featured-header ._featured-title-arrow ._featured-title {
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  #featured ._featured-header ._featured-title-arrow ._featured-title {
+    font-size: 54px;
+  }
+}
+#featured ._featured-header ._featured-title-arrow ._featured-arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+#featured ._featured-header ._featured-title-arrow ._featured-arrow button {
+  width: 40px;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--colors);
+  color: var(--colors);
+  background-color: transparent;
+  border-radius: 999em;
+  transition: all ease-in-out 0.5s;
+  cursor: pointer;
+}
+#featured ._featured-header ._featured-title-arrow ._featured-arrow button:hover {
+  background-color: var(--colors);
+  color: white;
+}
+#featured ._featured-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#featured ._featured-content ._featured-card {
+  position: relative;
+  width: 450px;
+  height: 330px;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#featured ._featured-content ._featured-card:hover ._featured-overlay-1 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#featured ._featured-content ._featured-card ._featured-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.6rem;
+  margin: 2rem;
+}
+#featured ._featured-content ._featured-card ._featured-card-content ._featured-card-categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.4rem;
+}
+#featured ._featured-content ._featured-card ._featured-card-content ._featured-card-categories span {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: white;
+}
+#featured ._featured-content ._featured-card ._featured-card-content ._featured-card-title {
+  color: white;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  #featured ._featured-content ._featured-card ._featured-card-content ._featured-card-title {
+    font-size: 24px;
+  }
+}
+#featured ._featured-content ._featured-card ._featured-overlay-1 {
+  transition: all ease-in-out 0.5s;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#featured ._featured-content ._featured-card ._featured-overlay-2 {
+  z-index: 2;
+  position: absolute;
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.81) 0%, rgba(255, 255, 255, 0) 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#featured ._featured-content ._featured-card ._featured-card-cover {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=featured.css.map */

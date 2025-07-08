@@ -1,0 +1,206 @@
+@use "../lib" as v
+
+#_products-root
+  width: 100%
+  @include v.flx()
+  @include v.sectionPad()
+
+  ._wrapper
+    width: 100%
+    @include v.pad()
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(4, auto)
+    grid-template-areas: 'head' 'prod' 'cate' 'pag'
+    gap: clamp(2rem, 2vw, 4rem)
+    @media (min-width: v.$minimumres)
+      grid-template-columns: auto 1fr
+      grid-template-rows: auto 1fr auto
+      grid-template-areas: 'cate head' 'cate prod' 'cate pag'
+
+    ._categories
+      grid-area: cate
+      ._wrapper
+        border: 1px solid rgba(0, 0, 0, 0.1)
+        border-radius: 1rem
+        padding: 2rem
+        @include v.flx($d: column, $j: start, $i: start, $g: 2rem)
+
+        ._cate-header
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+          padding-bottom: 1rem
+
+          ._title
+            font-size: v.$textlarge
+            color: var(--colors)
+            font-family: var(--primtext), sans-serif
+
+
+
+        ._cate-content
+          @include v.flx($d: column)
+
+          a
+            text-decoration: none
+            font-family: var(--primtext), sans-serif
+            @include v.flx($g: .8rem)
+            color: rgba(0, 0, 0, 0.6)
+            @include v.trans()
+            &:hover
+              color: var(--colors)
+
+
+    ._headbar
+      grid-area: head
+      @include v.flx($j: space-between)
+      ._title
+        font-family: var(--primtext), sans-serif
+        font-size: v.$textlarge
+        color: var(--colors)
+
+      ._searchbar
+        background-color: rgba(0, 0, 0, 0.05)
+        padding: 0
+        @media (min-width: v.$minimumres)
+          max-width: 500px
+          padding: .4rem .4rem .4rem 1.2rem
+          width: 100%
+          @include v.flx($g: .4rem)
+        border-radius: 999em
+        border: 1px solid rgba(0, 0, 0, 0.1)
+
+        label
+          flex: 0
+          display: none
+          @media (min-width: v.$minimumres)
+            display: block
+            flex: 1
+          input
+            width: 100%
+            border: none
+            outline: none
+            background-color: transparent
+
+        button
+          @include v.flx($g: 4px)
+          padding: .2rem .8rem
+          border: none
+          border-radius: 999em
+          background-color: var(--colors)
+          color: white
+
+    ._product-list
+      grid-area: prod
+      display: grid
+      grid-template-columns: repeat(1, 1fr)
+      gap: clamp(.4rem, 2vw, 1rem)
+
+      @media (min-width: v.$sminimumres)
+        grid-template-columns: repeat(2, 1fr)
+
+      @media (min-width: v.$minimumres)
+        grid-template-columns: repeat(3, 1fr)
+
+      ._card
+        border: 1px solid rgba(0, 0, 0, 0.1)
+        @include v.flx($d: column, $j: start)
+        border-radius: 1.4rem
+        overflow: hidden
+        @include v.trans()
+
+        ._top
+          position: relative
+          width: 100%
+          @include v.flx()
+
+          ._discount
+            position: absolute
+            top: 0
+            right: 0
+            background-color: var(--colors)
+            @include v.flx()
+            padding: .2rem .6rem
+            border-radius: 999em
+            color: white
+            font-size: v.$textsm
+            font-family: var(--primtext), sans-serif
+            margin: 1rem
+
+          img
+            width: 100%
+            aspect-ratio: 1/1
+            object-fit: cover
+
+
+
+        ._bottom
+          @include v.flx($d: column, $j: start, $i: start, $g: .6rem)
+          padding: clamp(1rem, 2vw, 1.6rem)
+          flex: 1
+
+          ._category
+            background-color: var(--colors)
+            color: white
+            font-size: v.$textsm
+            padding: .2rem .6rem
+            border-radius: 999em
+            font-family: var(--primtext), sans-serif
+
+          ._title
+            font-weight: 600
+            font-size: v.$textbase
+            color: rgba(0, 0, 0, 0.8)
+            font-family: var(--primtext), sans-serif
+            @media (min-width: v.$sminimumres)
+              font-size: v.$textlarge
+
+          ._description
+            font-size: v.$textsm
+            color: rgba(0, 0, 0, 0.5)
+
+          ._price
+            font-weight: 600
+            @include v.flx($d: column, $j: start, $i: start)
+            @media (min-width: v.$sminimumres)
+              @include v.flx($d: row, $j: start, $i: center, $g: .4rem)
+
+            span
+              font-weight: 400
+              font-size: v.$textsm
+              color: rgba(0, 0, 0, 0.5)
+
+          ._weight
+            background-color: rgba(0, 0, 0, 0.1)
+            color: rgba(0, 0, 0, 0.5)
+            padding: .1rem .6rem
+            font-size: v.$textsm
+            border-radius: 999em
+            margin-bottom: 1rem
+
+
+          ._cta
+            margin-top: auto
+            width: 100%
+            background-color: var(--colors)
+            padding: .8rem
+            color: white
+            text-decoration: none
+            @include v.flx()
+            font-size: v.$textbase
+            font-weight: 500
+            border-radius: .8rem
+            font-family: var(--primtext), sans-serif
+
+        &:hover
+          transform: translateY(-5px)
+          border: 1px solid var(--colors)
+          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1)
+
+    ._pagination
+      grid-area: pag
+      @include v.flx()
+      & *
+        color: var(--colors)
+
+
+

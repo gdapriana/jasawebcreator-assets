@@ -1,0 +1,135 @@
+@use 'lib' as v
+
+#contact
+    padding: 8rem 0
+    width: 100%
+    background-color: #05003b
+    position: relative
+    @include v.disflex()
+
+    ._contact-wrapper
+        width: 80%
+        @include v.disflex($direction: column, $justify: start, $items: stretch)
+        gap: 2rem
+        @media (min-width: 768px)
+            @include v.disflex($direction: row, $justify: center, $items: start)
+            gap: 8rem
+
+        ._contact-header
+            @include v.disflex($direction: column, $items: start, $justify: start)
+            gap: 2rem
+            @media (min-width: 768px)
+                flex: 0.4
+
+            ._contact-welcome
+                color: white
+                font-size: 16px
+                line-height: 12px
+
+            ._contact-title
+                font-size: 28px
+                color: white
+                @media (min-width: 768px)
+                    font-size: 34px
+                    font-weight: 700
+                    line-height: 1.15
+                    letter-spacing: -.02em
+
+            ._contact-header-content
+                background: hsla(0,0%,100%,.08)
+                border: 1px solid hsla(0,0%,100%,.12)
+                padding: 48px 40px 55px
+                border-radius: 20px
+                backdrop-filter: blur(3px)
+                width: 100%
+                @include v.disflex($direction: column, $justify: start, $items: start)
+                gap: 1rem
+                a
+                    color: white
+                & > a
+                    font-size: 17px
+                    i 
+                        margin-right: .4rem
+
+                ._header-socials
+                    margin-top: 1rem
+                    @include v.disflex($justify: start)
+                    gap: .8rem
+                    a
+                        padding: .4rem
+                        border-radius: 999em
+                        width: 38px
+                        aspect-ratio: 1/1
+                        @include v.disflex()
+                        border: 1px solid hsla(0,0%,100%,.2)
+
+
+
+
+        ._contact-content
+            display: grid
+            gap: 1.4rem
+            backdrop-filter: blur(10px)
+            background: rgba(255, 255, 255, 0.06)
+            border: 1px solid rgba(255, 255, 255, 0.08)
+            border-radius: 20px
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(7, auto)
+            grid-template-areas: "ms" "name" "address" "phone" "web" "mess" "send"
+            padding: 30px 30px 40px
+            @media (min-width: 768px)
+                flex: 0.6
+                padding: 50px 50px 65px
+                grid-template-columns: repeat(2, 1fr)
+                grid-template-rows: repeat(5, auto)
+                grid-template-areas: "ms ms" "name address" "phone web" "mess mess" "send send"
+
+            input, textarea
+                background: #312c61
+                border: 2px solid hsla(0,0%,100%,.08)
+                border-radius: 8px
+                padding: 5px 15px
+                @media (min-width: 768px)
+                    padding: 5px 30px
+                height: 54px
+                color: #fff
+                font-family: var(--primtext)
+                outline: none
+                font-size: 17px
+
+            textarea
+                height: 170px
+
+            ._contact-content-title
+                grid-area: ms
+                font-weight: 700
+                font-size: 40px
+                line-height: 40px
+                color: white
+            
+            ._contact-name
+                grid-area: name
+
+            ._contact-address
+                grid-area: address
+
+            ._contact-phone
+                grid-area: phone
+
+            ._contact-website
+                grid-area: web
+
+            ._contact-message
+                grid-area: mess
+
+            ._contact-submit
+                grid-area: send
+                font-weight: 600
+                font-size: 16px
+                line-height: 14px
+                color: white
+                background-color: var(--colors)
+                padding: 18px 20px
+                border-radius: 6px
+                border: none
+                font-family: var(--primtext)

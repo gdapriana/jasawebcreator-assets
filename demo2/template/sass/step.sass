@@ -1,0 +1,87 @@
+@use 'lib' as v
+
+#_step
+  width: 100%
+  @include v.flx()
+  padding: 100px 0
+  background-color: #f0f4f6
+
+  ._step-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: stretch, $g: 3rem)
+
+    @media (min-width: 1000px)
+      @include v.flx($g: 3rem)
+
+    ._content
+      @include v.flx($d: column, $j: start, $i: stretch)
+      @media (min-width: 1000px)
+        width: 60%
+
+      ._card
+        position: relative
+        background-color: rgba(255,255,255,0.5)
+        padding: 30px
+        @include v.trans()
+        @include v.flx()
+
+        ._number
+          font-size: 56px
+          font-weight: 100
+          color: var(--green-col)
+
+        ._title-desc
+          @include v.flx($d: column, $j: start, $i: start, $g: 0.6rem)
+          flex: 1
+          ._title
+            font-size: 20px
+            color: var(--text-col-1)
+            font-weight: 400
+
+          ._desc
+            @include v.subtext($lh: 1.5)
+            color: rgba(0, 0, 0, 0.5)
+
+        ._arrow
+          display: none
+          @media (min-width: 1000px)
+            rotate: 45deg
+            position: absolute
+            width: 40px
+            aspect-ratio: 1/1
+            background-color: white
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+
+
+
+    ._images
+      position: relative
+      @include v.flx()
+      @media (min-width: 1000px)
+        width: 40%
+
+      ._screens
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 70%
+        transform: translate(-50%,  -50%)
+
+
+        ._screen
+          width: 100%
+
+      ._phone
+        max-width: 80%
+
+
+
+#_step ._card._active ._arrow
+  display: block !important
+
+
+._dnone
+  display: none !important

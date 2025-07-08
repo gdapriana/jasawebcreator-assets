@@ -1,0 +1,60 @@
+@use "lib" as v
+
+#_wcu-root
+  background-color: var(--colors)
+  width: 100%
+  @include v.flx()
+  @include v.sectionPad()
+
+  *
+    padding: 0
+    margin: 0
+
+  ._wrapper
+    width: 100%
+    @include v.pad()
+    display: grid
+    gap: clamp(1rem, 2vw, 3rem)
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(4, auto)
+    grid-template-areas: 'head' 'a' 'b' 'c'
+
+    @media (min-width: v.$minimumres)
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, auto)
+      grid-template-areas: 'head a' 'b c'
+
+    ._header
+      grid-area: head
+      @include v.headerTemplateRedBgWCU()
+
+    ._card
+      padding: 2rem
+      background-color: white
+      border-radius: 1rem
+      @include v.flx($d: column, $j: start, $i: start, $g: .6rem)
+
+      ._icon
+        background-color: var(--colors)
+        padding: 1rem
+        border-radius: 999em
+        i
+          font-size: clamp(2rem, 2vw, 3.6rem)
+          color: white
+
+      ._title
+        font-weight: 600
+        font-family: var(--primtext), sans-serif
+        color: rgba(0, 0, 0, 0.8)
+
+      ._description
+        font-size: v.$textbase
+        font-family: var(--primtext), sans-serif
+        color: rgba(0, 0, 0, 0.5)
+
+      &:first-child
+        grid-area: a
+      &:nth-child(2)
+        grid-area: b
+      &:last-child
+        grid-area: c

@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,100..900;1,100..900&family=Oooh+Baby&display=swap");
+:root {
+  --colors: #D29F54;
+  --decotext: "Oooh Baby", cursive;
+  --primtext: "Italiana", sans-serif;
+  --subtext: "Jost", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+#_client-root-mobile * {
+  padding: 0;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+#_client-root-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+}
+@media (min-width: 768px) {
+  #_client-root-mobile {
+    display: none;
+  }
+}
+#_client-root-mobile ._client-header {
+  padding: 2rem 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  transform: translateY(100px);
+}
+#_client-root-mobile ._client-header span._client-span {
+  font-family: var(--decotext);
+  font-size: 18px;
+  text-align: center;
+}
+#_client-root-mobile ._client-header h2._client-title {
+  font-family: var(--primtext);
+  font-size: 24px;
+  text-align: center;
+}
+#_client-root-mobile ._client-image {
+  padding: 2rem 7%;
+  transform: translateY(100px);
+}
+#_client-root-mobile ._client-image img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+#_client-root-mobile ._client-logos {
+  background-color: var(--colors);
+  padding: 8rem 7% 4rem;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+#_client-root-mobile ._client-logos ._client-logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+#_client-root-mobile ._client-logos ._client-logo-wrapper img._client-logo {
+  width: 100%;
+}
+
+#_client-root-desktop * {
+  padding: 0;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+#_client-root-desktop {
+  display: none;
+  gap: 8rem;
+}
+@media (min-width: 768px) {
+  #_client-root-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+  }
+}
+#_client-root-desktop ._client-header {
+  padding: 0 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#_client-root-desktop ._client-header span._client-span {
+  font-family: var(--decotext);
+  font-size: 24px;
+  text-align: center;
+}
+#_client-root-desktop ._client-header h2._client-title {
+  font-family: var(--primtext);
+  font-size: 30px;
+  text-align: center;
+}
+#_client-root-desktop ._client-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 4rem;
+  background-color: var(--colors);
+  padding: 5rem 7%;
+}
+#_client-root-desktop ._client-main ._client-logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  flex: 1;
+}
+#_client-root-desktop ._client-main ._client-logos ._client-logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+#_client-root-desktop ._client-main ._client-logos ._client-logo-wrapper img._client-logo {
+  width: 80%;
+}
+#_client-root-desktop ._client-main ._client-image {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#_client-root-desktop ._client-main ._client-image img {
+  width: 100%;
+  object-fit: cover;
+  height: 170%;
+}
+
+/*# sourceMappingURL=client.css.map */

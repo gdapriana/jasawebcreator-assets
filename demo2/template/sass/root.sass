@@ -1,0 +1,21 @@
+@use 'lib' as v
+
+:root
+  --blue-col: #11aff1
+  --green-col: #3fb125
+  --text-col-1: #212529
+  --text-col-2: #828c9c
+  --white-col-1: #fff
+  --icon-col: #48d3b0
+
+body
+  font-family: "Roboto", sans-serif
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  @include v.subtext()

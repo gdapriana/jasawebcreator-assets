@@ -1,0 +1,32 @@
+@use 'lib' as v
+
+#_template
+  width: 100%
+  @include v.flx()
+  background-color: var(--white-col-1)
+  padding: 100px 0
+
+  ._template-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: stretch)
+
+    ._header
+      z-index: 2
+      @include v.flx($d: column, $j: start, $i: start)
+      ._title
+        @include v.heading()
+
+      ._desc
+        @include v.subtext()
+        @media (min-width: v.$md)
+          width: 50%
+
+
+    ._image
+      img
+        width: 100%
+
+      @media (min-width: v.$md)
+        margin-top: -10%
+

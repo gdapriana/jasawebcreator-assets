@@ -1,0 +1,31 @@
+#_hero-root {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: var(--colors);
+}
+#_hero-root ._wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 0 7%;
+}
+#_hero-root ._wrapper ._title {
+  font-family: var(--primtext), sans-serif;
+  font-weight: 700;
+  color: white;
+}
+#_hero-root ._wrapper ._description {
+  color: white;
+  font-family: var(--primtext), sans-serif;
+}
+
+/*# sourceMappingURL=hero.css.map */

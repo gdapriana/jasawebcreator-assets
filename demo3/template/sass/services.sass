@@ -1,0 +1,117 @@
+@use 'lib' as v
+
+#_services
+    width: 100%
+    padding: 4rem 0
+    background-color: white
+    @include v.disflex()
+
+    ._services-wrapper
+        width: 100%
+        padding: 0 7%
+
+        ._services-content-wrapper
+            background-color: #E8F3FF
+            border-radius: 20px
+            position: relative
+            border: 2px solid #0E0B3D26
+            width: 100%
+            padding: 60px
+            @include v.disflex($d: column, $j: start, $i: stretch, $g: 4rem)
+
+            ._pill
+                position: absolute
+                top: -20px
+                @include v.disflex()
+                left: 50%
+                transform: translateX(-50%)
+                width: 150px
+                right: 50%
+
+            ._services-header
+                @include v.disflex($d: column, $j: start, $i: center)
+
+                ._services-title
+                    text-align: center
+                    @include v.heading()
+                    @media (min-width: 1000px)
+                        @include v.heading($fs: 64px)
+
+                ._services-desc
+                    @include v.subtext()
+                    width: 100%
+                    max-width: 600px
+                    text-align: center
+                    @media (min-width: 1000px)
+                        @include v.subtext($fs: 16px)
+
+            ._services-content
+                display: grid
+                grid-template-columns: 1fr
+                grid-template-rows: repeat(5, auto)
+                gap: 2rem
+                grid-template-areas: "seo" "ppc" "content" "social" "email"
+
+                @media (min-width: 1000px)
+                    grid-template-columns: repeat(6, 1fr)
+                    grid-template-rows: repeat(2, auto)
+                    grid-template-areas: "seo seo ppc ppc content content" "social social social email email email"
+
+                ._service-card
+                    @include v.disflex($d: column, $i: start, $j: start)
+                    padding: 40px
+                    border-radius: 10px
+                    border: 1px solid rgba(0, 0, 0, 0.1)
+                    background-color: white
+
+                    &:hover
+                        & > *
+                            transform: translateY(-20px)
+
+                    ._card-img
+                        @include v.trans()
+                        padding: 20px
+                        background-color: rgb(232, 243, 255)
+                        border-radius: 999em
+                        border: 1px solid rgba(14, 11, 61, 0.15)
+                        @include v.disflex()
+                        img
+                            width: 54px
+
+                    ._card-title
+                        @include v.trans()
+                        font-family: var(--e-global-typography-primary-font-family)
+                        font-weight: 500
+                        font-size: 20px
+                        color: var(--e-global-color-primary)
+                        @media (min-width: 1000px)
+                            font-size: 24px
+
+                    ._card-desc
+                        @include v.trans()
+                        @include v.subtext()
+                        @media (min-width: 1000px)
+                            line-height: 1.6
+                            @include v.subtext($fs:16px)
+
+                ._seo
+                    grid-area: seo
+                ._ppc
+                    grid-area: ppc
+                    @include v.gradback()
+
+                    ._card-img
+                        background-color: rgba(255, 255, 255, 0.2)
+                        border: 1px solid white
+
+                    ._card-title
+                        color: white
+
+                    ._card-desc
+                        color: rgba(255, 255, 255, 0.3)
+                ._content
+                    grid-area: content
+                ._social
+                    grid-area: social
+                ._email
+                    grid-area: email

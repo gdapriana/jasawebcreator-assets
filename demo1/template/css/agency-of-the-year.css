@@ -1,0 +1,181 @@
+#saoty {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+#saoty ._saoty-wrapper {
+  z-index: 2;
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 75%;
+  gap: 3rem;
+  max-width: 700px;
+}
+#saoty ._saoty-wrapper ._saoty-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+#saoty ._saoty-wrapper ._saoty-header ._saoty-welcome {
+  position: relative;
+  padding: 2rem;
+}
+#saoty ._saoty-wrapper ._saoty-header ._saoty-welcome ._welcome-wavy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#saoty ._saoty-wrapper ._saoty-header ._saoty-welcome span {
+  color: var(--colors);
+  font-weight: 600;
+}
+#saoty ._saoty-wrapper ._saoty-header ._saoty-title {
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-size: 30px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #saoty ._saoty-wrapper ._saoty-header ._saoty-title {
+    font-size: 54px;
+  }
+}
+#saoty ._saoty-wrapper ._saoty-header ._saoty-title span {
+  font-weight: 300;
+}
+#saoty ._saoty-wrapper ._saoty-header ._saoty-desc {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--text-color2);
+}
+#saoty ._saoty-wrapper ._saoty-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 3rem;
+}
+#saoty ._saoty-wrapper ._saoty-content ._saoty-toggle-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+#saoty ._saoty-wrapper ._saoty-content ._saoty-toggle-wrapper ._saoty-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: #e9ebf3;
+  overflow: hidden;
+}
+#saoty ._saoty-wrapper ._saoty-content ._saoty-toggle-wrapper ._saoty-toggle ._saoty-toggle-input {
+  position: absolute;
+  outline: none;
+  display: block;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 6;
+}
+#saoty ._saoty-wrapper ._saoty-content ._saoty-toggle-wrapper ._saoty-toggle ._saoty-toggle-switch {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  bottom: 2px;
+  right: 53.3%;
+  background-color: var(--colors);
+  border-radius: 36px;
+  z-index: 1;
+  transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-property: left, right;
+  transition-delay: 0s, 0.08s;
+  box-shadow: 0 2px 4px rgba(0, 20, 128, 0.3);
+}
+#saoty ._saoty-wrapper ._saoty-content ._saoty-toggle-wrapper span {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+#saoty ._saoty-wrapper ._saoty-content ._saoty-count-wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  grid-template-rows: repeat(3, auto);
+}
+@media (min-width: 600px) {
+  #saoty ._saoty-wrapper ._saoty-content ._saoty-count-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+}
+#saoty ._saoty-wrapper ._saoty-content ._saoty-count-wrapper ._saoty-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+#saoty ._saoty-wrapper ._saoty-content ._saoty-count-wrapper ._saoty-card h3 {
+  font-weight: 600;
+  font-size: 30px;
+}
+#saoty ._saoty-wrapper ._saoty-content ._saoty-count-wrapper ._saoty-card p {
+  font-size: 16px;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: var(--text-color2);
+}
+#saoty ._saoty-elements {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 1220px) {
+  #saoty ._saoty-elements {
+    display: flex;
+  }
+}
+#saoty ._saoty-elements img {
+  position: absolute;
+}
+#saoty ._saoty-elements ._element-graph-1 {
+  top: 50%;
+  bottom: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+}
+#saoty ._saoty-elements ._element-graph-2 {
+  top: 50%;
+  bottom: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=agency-of-the-year.css.map */

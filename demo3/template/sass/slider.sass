@@ -1,0 +1,197 @@
+@use 'lib' as v
+
+#_slider
+    width: 100%
+    padding: 15rem 0 4rem
+    @include v.disflex
+    background-image: linear-gradient(180deg, #F4FEFF 65%, #FFFFFF 100%)
+
+    ._slider-wrapper
+        width: 100%
+        display: grid
+        padding: 0 7%
+        grid-template-columns: 100%
+        row-gap: 8rem
+        grid-template-rows: repeat(3, auto)
+        grid-template-areas: "con" "img" "com"
+        @media (min-width: 1000px) 
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(2, auto)
+            grid-template-areas: "con img" "com com"
+
+        ._slider-content
+            grid-area: con
+            position: relative
+            @include v.disflex($d: column, $j: start, $i: start, $g: 2rem)
+
+            ._element-5
+                position: absolute
+                width: 135px
+                display: none
+                left: 65%
+                top: 3%
+                @media (min-width: 1000px)
+                    display: block
+
+            ._slider-title
+                font-size: 48px
+                font-weight: 700
+                line-height: 1.1em
+                letter-spacing: -0.5px
+                text-align: center
+                font-family: var(--e-global-typography-primary-font-family)
+                @media (min-width: 768px)
+                    text-align: left 
+                    font-size: 80px
+
+            ._slider-subtitle
+                @include v.subtext($fs: 16px)
+                text-align: center
+                color: #0E0B3DA6
+                @media (min-width: 768px)
+                    @include v.subtext($fs: 18px)
+                    text-align: left 
+            
+            ._slider-cta-wrapper
+                width: 100%
+                @include v.disflex($g: 1rem, $d: column)
+                @media (min-width: 768px)
+                    @include v.disflex($g: 1rem, $d: row, $j: start, $i: center)
+
+                ._slider-cta
+                    @include v.disflex()
+                    box-shadow: 0px 6px 12px 0px rgba(9.488944251018994, 86.19899155061154, 201.26406249999997, 0.2) inset
+                    border-radius: 999em
+                    padding: 4px
+
+                    span
+                        color: white
+                        padding: 18px 40px
+                        border-radius: 999em
+                        font-size: 18px
+                        background-color: var(--e-global-color-secondary)
+                    
+                ._slider-users
+                    position: relative
+                    width: 150px
+                    height: 50px
+                    @include v.disflex
+
+                    ._img-wrapper, ._additional
+                        height: 100%
+                        aspect-ratio: 1/1
+                        position: absolute
+                        @include v.disflex()
+                        border-radius: 999em
+                        overflow: hidden
+                        padding: 3px
+                        border: 1px solid rgba(0, 0, 0, 0.1)
+                        background-color: white
+
+                        img
+                            width: 100%
+                            height: 100%
+                            border-radius: 999em
+                    ._img-wrapper
+                        &:first-child
+                            left: 0
+                            z-index: 1
+                    ._img-wrapper
+                        &:nth-child(2)
+                            left: 25%
+                            transform: translateX(-12.5%)
+                            z-index: 2
+                    ._img-wrapper
+                        &:nth-child(3)
+                            right: 25%
+                            z-index: 3
+
+                    ._additional
+                        right: 0
+                        z-index: 4
+                        font-size: 14px
+                        font-size: var(--e-global-typography-primary-font-family)
+                        border: 2px solid #AF94FF
+                        color: #6F46EB
+                        background-color: #EEE8FF
+
+        ._slider-image
+            grid-area: img
+            margin-top: 4rem
+            @include v.disflex()
+            @media (min-width: 1000px)
+                margin-top: 0
+                @include v.disflex($j: end)
+            ._img-back
+                border: 1px solid #A4DDE2
+                width: 80%
+                border-radius: 1rem
+                aspect-ratio: 1/1
+                background-color: #D1FBFF
+                @include v.disflex()
+                position: relative
+
+                ._element-1
+                    position: absolute
+                    bottom: 0
+                    width: 100%
+                    left: 50%
+                    right: 50%
+                    z-index: 2
+                    transform: translateX(-60%)
+
+                ._element-2
+                    position: absolute
+                    bottom: 20px
+                    width: 40%
+                    z-index: 3
+                    right: 20px
+                    box-shadow: 0px 5px 20px 0px rgba(13.999999999999975, 10.999999999999993, 60.999999999999964, 0.15)
+
+                ._element-3
+                    position: absolute
+                    bottom: 40px
+                    left: -10%
+                    z-index: 4
+                    width: 50%
+                    box-shadow: 0px 3px 20px 0px rgba(13.999999999999975, 10.999999999999993, 60.999999999999964, 0.1)
+
+                ._element-4
+                    width: 100%
+                    z-index: 1
+                    position: absolute
+                    top: 0
+
+        ._slider-companies
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+            padding-bottom: 4rem
+            grid-area: com
+            @include v.disflex($d: column, $j: start, $i: stretch, $g: 3rem)
+            @media (min-width: 1000px)
+                @include v.disflex($d: row, $g: 7rem)
+
+            ._slider-companies-title
+                font-size: 22px
+                text-align: center
+                font-family: var(--e-global-typography-primary-font-family)
+                @media (min-width: 1000px)
+                    font-size: 28px
+                    width: 25%
+                    text-align: left
+
+            ._companies-list
+                width: 100%
+                @include v.disflex()
+                @media (min-width: 1000px)
+                    width: 75%
+                img
+                    width: 100px
+                    @include v.trans()
+                    @media (min-width: 1000px)
+                        width: 200px
+                    margin-right: 40px
+                    opacity: 0.7
+                    &:hover
+                        opacity: 1
+
+        

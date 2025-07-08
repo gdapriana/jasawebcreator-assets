@@ -1,0 +1,135 @@
+@use "size" as s
+
+@mixin flx($d: row, $j: center, $i: center, $g: 0)
+  display: flex
+  flex-direction: $d
+  justify-content: $j
+  align-items: $i
+  gap: $g
+
+@mixin grd($r: 1, $sr: 1fr, $c: 1, $sc: 1fr, $g: 1rem)
+  display: grid
+  gap: $g
+  grid-template-columns: repeat($c, $sc)
+  grid-template-rows: repeat($r, $sr)
+
+@mixin heading($fs: 32px, $fw: 100, $lh: 1.2, $ls: 0.5px, $fm: "Roboto", $cl: var(--text-col-1))
+  font-size: $fs
+  font-weight: $fw
+  line-height: $lh
+  letter-spacing: $ls
+  font-family: $fm, sans-serif
+  color: $cl
+
+@mixin subtext($fs: 16px, $lh: 1.8, $fw: 400, $fm: "Roboto", $cl: var(--text-col-1))
+  font-size: $fs
+  font-weight: $fw
+  font-family: $fm, sans-serif
+  color: $cl
+  line-height: $lh
+
+@mixin trans($mode: all, $easing: ease-in-out, $duration: .3s)
+  transition: $mode $easing $duration
+
+@mixin pad($lr: 7%, $tb: 0)
+  padding: $tb $lr
+
+@mixin sectionPad($s: 6rem)
+  padding-top: $s
+  padding-bottom: $s
+
+
+@mixin headerTemplate()
+  @include flx($d: column, $g: 1rem)
+  margin-bottom: 2rem
+
+  ._pill
+    background-color: var(--colors)
+    color: white
+    padding: .4rem 1rem
+    border-radius: 999em
+    font-family: var(--primtext), sans-serif
+    font-size: s.$textsm
+    margin-bottom: 1rem
+    @media (min-width: s.$minimumres)
+      font-size: s.$textbase
+
+  ._title
+    font-family: var(--primtext), sans-serif
+    text-transform: uppercase
+    font-weight: 700
+    color: rgba(0, 0, 0, 0.9)
+    text-align: center
+
+  ._description
+    text-align: center
+    color: rgba(0, 0, 0, 0.5)
+    width: 100%
+    max-width: 700px
+    font-family: var(--primtext), sans-serif
+    font-size: s.$textbase
+
+
+@mixin headerTemplateRedBg()
+  @include flx($d: column, $g: 1rem)
+  margin-bottom: 2rem
+
+  ._pill
+    background-color: white
+    color: var(--colors)
+    padding: .4rem 1rem
+    border-radius: 999em
+    font-family: var(--primtext), sans-serif
+    font-size: s.$textsm
+    margin-bottom: 1rem
+    @media (min-width: s.$minimumres)
+      font-size: s.$textbase
+
+  ._title
+    font-family: var(--primtext), sans-serif
+    text-transform: uppercase
+    font-weight: 700
+    color: rgba(255,255,255,1)
+    text-align: center
+
+  ._description
+    text-align: center
+    color: rgba(255,255,255,0.5)
+    width: 100%
+    max-width: 700px
+    font-family: var(--primtext), sans-serif
+    font-size: s.$textbase
+
+@mixin headerTemplateRedBgWCU()
+  @include flx($d: column, $g: 1rem, $j: start, $i: start)
+  margin-bottom: 2rem
+
+  ._pill
+    background-color: white
+    color: var(--colors)
+    padding: .4rem 1rem
+    border-radius: 999em
+    font-family: var(--primtext), sans-serif
+    font-size: s.$textsm
+    margin-bottom: 1rem
+    @media (min-width: s.$minimumres)
+      font-size: s.$textbase
+
+  ._title
+    font-family: var(--primtext), sans-serif
+    text-transform: uppercase
+    font-weight: 700
+    color: rgba(255,255,255,1)
+    text-align: start
+
+  ._description
+    text-align: start
+    color: rgba(255,255,255,0.5)
+    width: 100%
+    max-width: 700px
+    font-family: var(--primtext), sans-serif
+    font-size: s.$textbase
+
+
+  
+  

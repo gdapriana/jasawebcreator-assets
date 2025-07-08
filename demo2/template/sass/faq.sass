@@ -1,0 +1,38 @@
+@use 'lib' as v
+
+#_faq
+  width: 100%
+  @include v.flx($d: column, $j: start, $i: stretch, $g: 0)
+  padding: 100px 0
+  background-color: #f0f4f6
+
+  ._faq-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: center, $g: 4rem)
+
+    ._header
+      @include v.flx($d: column, $j: start, $i: center)
+
+      ._title
+        @include v.heading()
+      ._desc
+        @include v.subtext()
+
+    ._content
+      @include v.grd($c: 1, $r: 4, $sr: auto, $g: 2rem)
+      @media (min-width: v.$md)
+        @include v.grd($c: 2, $r: 2, $sr: auto, $g: 2rem)
+
+      ._content-card
+        @include v.flx($d: column, $j: start, $i: start)
+
+        ._card-title
+          font-size: 20px
+          color: var(--text-col-1)
+          font-weight: 400
+
+        ._card-desc
+          @include v.subtext()
+          color: rgba(0,0,0,0.5)
+

@@ -1,0 +1,130 @@
+@use 'lib' as v
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap')
+
+:root
+  --primtext: "Jost", sans-serif
+  --subtext: "Jost", sans-serif
+  --colors: #d8732b
+
+
+#_header-root *
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  color: white
+
+.container-global
+  padding-left: 7% !important
+  padding-right: 7% !important
+
+body
+  font-family: "Jost", sans-serif
+
+#_header-root
+  padding-top: 2rem
+  padding-bottom: 2rem
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  border-bottom: 1px solid rgba(255,255,255, 0.2)
+  z-index: 9999
+
+  ._header-wrapper
+    @include v.disflex($justify: space-between)
+
+    ._hamburger-wrapper
+      position: relative
+      width: 50px
+      aspect-ratio: 1/1
+
+      ._hamburger-content
+        position: absolute
+        top: 0
+        left: 0
+        width: 50px
+        height: 50px
+        border-radius: 1.5rem
+        @include v.disflex($direction: column, $align: stretch, $justify: end)
+        z-index: 1
+        background-color: rgba(255,255,255,0.5)
+        backdrop-filter: blur(10px)
+
+        ._links-wrapper
+          height: 90%
+          width: 100%
+          padding: 0 4rem 4rem
+          display: none
+          flex-direction: column
+          justify-content: space-evenly
+          align-items: start
+
+          ._link-wrapper
+            padding: .4rem 0
+            position: relative
+            @include v.disflex()
+
+            ._link
+              text-transform: uppercase
+              font-size: 1.8rem
+              text-decoration: none
+              @media (min-width: 570px)
+                font-size: 2.4rem
+
+            ._sublinks-wrapper
+              position: absolute
+              right: -80px
+              opacity: 0
+              top: 50%
+              transform: translateY(-50%)
+              background-color: white
+              padding: 1rem
+
+              ._sublink-wrapper
+                ._sublink
+                  color: black
+                  text-decoration: none
+                  text-transform: uppercase
+                  font-size: 20px
+
+      ._hamburger-btn
+        width: 40px
+        position: absolute
+        z-index: 2
+        cursor: pointer
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        border-radius: 999em
+        aspect-ratio: 1/1
+        background-color: white
+        ._line
+          position: absolute
+          transform: translate(-50%, -50%)
+          width: 60%
+          height: 2px
+          transform-origin: center
+          background-color: black
+          &:first-child
+            top: 45%
+            left: 50%
+            z-index: 1
+          &:last-child
+            top: 55%
+            left: 50%
+            z-index: 2
+
+    ._header-brand
+      img
+        width: 100px
+        object-fit: cover
+        @media (min-width: v.$md)
+          width: 140px
+
+    ._header-book-btn
+      background-color: var(--colors)
+      padding: .6rem 1rem
+      cursor: pointer
+      @media (min-width: v.$md)
+        padding: .8rem 1.2rem
+        font-size: 18px

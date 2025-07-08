@@ -1,0 +1,73 @@
+@use 'lib' as v
+
+#_features
+  width: 100%
+  @include v.flx()
+  background-color: var(--white-col-1)
+  padding: 100px 0
+
+  ._features-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: stretch)
+
+    ._header
+      @include v.flx($d: column, $j: center, $i: center)
+
+      ._title
+        @include v.heading()
+        text-align: center
+        max-width: 650px
+
+      ._desc
+        text-align: center
+        @include v.subtext()
+        max-width: 650px
+
+    ._content
+      @include v.grd($c: 1, $r: 6, $sr: auto)
+
+      @media (min-width: v.$md)
+        @include v.grd($c: 3, $r: 2, $sr: auto, $g: 0)
+
+      ._content-card
+        @include v.flx($d: column, $j: start, $i: center)
+        padding: 2rem
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+
+        @media (min-width: v.$md)
+          border-bottom: none
+          &:nth-child(-n+3)
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+
+          &:nth-child(3n+1)
+            border-right: 1px solid rgba(0, 0, 0, 0.1)
+
+
+          &:nth-child(3n)
+            border-left: 1px solid rgba(0, 0, 0, 0.1)
+
+
+          &:nth-child(n+7)
+            border-top: 1px solid rgba(0, 0, 0, 0.1)
+   
+
+        ._card-icon
+          font-size: 2rem
+          color: var(--icon-col)
+
+        ._card-title
+          font-size: 20px
+          color: var(--text-col-1)
+          text-align: center
+
+        ._card-desc
+          text-align: center
+          @include v.subtext()
+          color: var(--text-col-1)
+
+      ._desc
+        @include v.subtext()
+        text-align: center
+        max-width: 650px
+

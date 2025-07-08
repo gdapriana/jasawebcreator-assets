@@ -1,0 +1,67 @@
+@use 'lib' as v
+
+#_any-app
+  width: 100%
+  @include v.flx($d: column, $j: start, $i: stretch, $g: 0)
+  padding: 100px 0 0 0
+  background-color: #f0f4f6
+
+  ._any-app-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: stretch, $g: 2rem)
+
+    ._header
+      @include v.flx($d: column, $j: center, $i: center)
+
+      ._title
+        @include v.heading()
+        text-align: center
+
+      ._desc
+        @include v.subtext()
+        text-align: center
+        max-width: 800px
+
+      ._cta
+        padding: 10px 16px
+        border: 2px solid var(--blue-col)
+        border-radius: 999em
+        color: var(--blue-col)
+        @include v.trans()
+
+        &:hover
+          background-color: var(--blue-col)
+          color: white
+
+        @media (min-width: v.$md)
+          padding: 12px 40px
+
+    ._images
+      position: relative
+      @include v.flx()
+      overflow: hidden
+
+      ._phone-front
+        z-index: 3
+        width: 30%
+        max-width: 100%
+        transform: translateY(50px)
+        @media (min-width: v.$md)
+          transform: translateY(100px)
+
+      ._phone-back-1
+        position: absolute
+        left: 15%
+        width: 25%
+        z-index: 2
+        bottom: -70px
+        max-width: 100%
+
+      ._phone-back-2
+        width: 25%
+        position: absolute
+        z-index: 1
+        right: 15%
+        bottom: -70px
+        max-width: 100%

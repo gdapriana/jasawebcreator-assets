@@ -1,0 +1,132 @@
+@use 'lib' as v
+
+#_pricing
+    width: 100%
+    padding: 4rem 0
+    @include v.disflex()
+    background-color: white
+
+    ._pricing-wrapper
+        width: 100%
+        padding: 0 7%
+        @include v.disflex($d: column, $i: stretch, $j: start, $g: 4rem)
+
+        ._pricing-header
+            @include v.disflex($d: column, $j: start, $i: stretch)
+            @media (min-width: 768px)
+                @include v.disflex($d: row, $j: center, $i: center)
+
+            ._pricing-pill-title
+                @include v.disflex($d: column, $j:start, $i: center)
+                @media (min-width: 768px)
+                    width: 70%
+                    @include v.disflex($d: column, $j:start, $i: start)
+                ._pricing-title
+                    @include v.heading()
+                    text-align: center
+                    @media (min-width: 768px)
+                        width: 70%
+                        text-align: left
+                        @include v.heading($fs: 64px)
+
+            ._pricing-description
+                @include v.subtext()
+                text-align: center
+                @media (min-width: 768px)
+                    @include v.subtext($fs: 16px)
+                    text-align: left
+                    width: 30%
+
+
+        ._pricing-content
+            padding: 40px
+            border-radius: 20px
+            background-color: var(--e-global-color-f13ace2)
+            border: 1px solid #0E0B3D26
+            position: relative
+            @include v.disgrid($r: 3, $sr: auto, $c: 1)
+            @media (min-width: 1000px)
+                @include v.disgrid($r: 1, $sr: auto, $c: 3)
+
+            ._pricing-card
+                background-color: white
+                @include v.trans()
+                padding-top: 2rem
+                border-radius: 10px
+                border: 1px solid #eaeaeb
+                @include v.disflex($d: column, $j: end, $i: center, $g: 1rem)
+
+                &:last-child
+                    position: relative
+                    margin-top: 3rem
+                    @include v.gradback()
+                    @media (min-width: 1000px)
+                        margin: -60px 0
+
+                    ._price-element
+                        display: flex
+                        position: absolute
+                        top: -10%
+                        padding: 20px
+                        border-radius: 999em
+                        border: 1px solid rgba(0, 0, 0, 0.1)
+                        background-color: white
+                        img
+                            width: 54px
+                            aspect-ratio: 1/1
+
+
+                    ._price, ._plan, ._price span
+                        color: white
+
+                    ._price-cta
+                        border: 1px solid black
+                        span
+                            background-color: black
+
+                &:hover
+                    transform: translateY(-10px)
+
+                ._price-element
+                    display: none
+
+                ._price
+                    font-size: 40px
+                    color: var(--e-global-color-secondary)
+                    font-weight: 700
+                    font-family: var(--e-global-typography-primary-font-family)
+
+                    span
+                        font-size: 14px
+                        color: rgba(0, 0, 0, 0.2)
+
+                ._plan
+                    font-family: var(--e-global-typography-primary-font-family)
+                    color: var(--e-global-color-primary)
+                    font-size: 22px
+                    font-weight: 500
+
+                ._price-cta
+                    @include v.disflex()
+                    padding: 4px
+                    border-radius: 999em
+                    border: 1px solid var(--e-global-color-secondary)
+
+                    span
+                        background-color: var(--e-global-color-secondary)
+                        border-radius: 999em
+                        padding: 14px 36px
+                        color: white
+
+                ._price-add
+                    border: 1px solid #CFBFFD
+                    background-color: #FCFCFF
+                    padding: 1rem
+                    border-radius: 10px 10px 0 0
+                    @include v.disflex($d: column, $i: start, $j: start, $g: 1.4rem)
+
+                    i
+                        color: var(--e-global-color-secondary)
+
+                    p
+                        color: rgba(0, 0, 0, 0.5)

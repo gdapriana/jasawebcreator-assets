@@ -1,0 +1,147 @@
+#wcu {
+  width: 100%;
+  padding: 3rem 0;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#wcu ._wcu-wrapper {
+  width: 80%;
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+}
+@media (min-width: 768px) {
+  #wcu ._wcu-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  #wcu ._wcu-wrapper ._wcu-image-wrapper, #wcu ._wcu-wrapper ._wcu-content-wrapper {
+    flex: 1;
+  }
+}
+#wcu ._wcu-wrapper ._wcu-image-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#wcu ._wcu-wrapper ._wcu-image-wrapper ._wcu-image {
+  animation: img-border 5s linear infinite alternate;
+  z-index: 2;
+  width: 90%;
+}
+#wcu ._wcu-wrapper ._wcu-image-wrapper ._wcu-element-1, #wcu ._wcu-wrapper ._wcu-image-wrapper ._wcu-element-2 {
+  z-index: 1;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.4rem;
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-header ._wcu-welcome {
+  position: relative;
+  padding: 2rem;
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-header ._wcu-welcome ._welcome-wavy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-header ._wcu-welcome span {
+  color: var(--colors);
+  font-weight: 600;
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-header ._wcu-title {
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-size: 30px;
+  text-align: start;
+}
+@media (min-width: 768px) {
+  #wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-header ._wcu-title {
+    font-size: 54px;
+  }
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-header ._wcu-title span {
+  font-weight: 300;
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-header ._wcu-desc {
+  font-size: 16px;
+  text-align: start;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--text-color2);
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-content {
+  width: 100%;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+}
+@media (min-width: 768px) {
+  #wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-content ._wcu-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.6rem;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.5s;
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-content ._wcu-card:hover {
+  box-shadow: 0 20px 40px rgba(8, 10, 55, 0.12);
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-content ._wcu-card ._wcu-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+}
+#wcu ._wcu-wrapper ._wcu-content-wrapper ._wcu-content ._wcu-card ._wcu-card-arrow {
+  color: var(--text-color2);
+}
+
+@keyframes img-border {
+  0% {
+    border-radius: 51% 49% 77% 23%/65% 50% 50% 35%;
+  }
+  100% {
+    border-radius: 30% 70% 28% 72%/53% 69% 31% 47%;
+  }
+}
+
+/*# sourceMappingURL=wcu.css.map */

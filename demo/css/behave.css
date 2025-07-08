@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --primtext: "Jost", sans-serif;
+  --subtext: "Jost", sans-serif;
+  --colors: #d8732b;
+}
+
+#_header-root * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.container-global {
+  padding-left: 7% !important;
+  padding-right: 7% !important;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+}
+
+#_header-root {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 9999;
+}
+#_header-root ._header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+#_header-root ._header-wrapper ._book-btn {
+  margin-left: auto;
+}
+#_header-root ._header-wrapper ._hamburger-btn {
+  width: 40px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 999em;
+  position: relative;
+  aspect-ratio: 1/1;
+  background-color: white;
+}
+#_header-root ._header-wrapper ._hamburger-btn ._line {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 2px;
+  transform-origin: center;
+  background-color: black;
+}
+#_header-root ._header-wrapper ._hamburger-btn ._line:first-child {
+  top: 45%;
+  left: 50%;
+  z-index: 1;
+}
+#_header-root ._header-wrapper ._hamburger-btn ._line:last-child {
+  top: 55%;
+  left: 50%;
+  z-index: 2;
+}
+
+._hamburger-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  position: fixed;
+  right: 120%;
+  top: 0;
+  width: 90%;
+  height: 100vh;
+}
+@media (min-width: 768px) {
+  ._hamburger-content {
+    width: 40%;
+  }
+}
+._hamburger-content ._hamburger-content-wave {
+  width: 120px;
+  background-color: var(--colors);
+  border-radius: 100% 0 0 100%/50% 25% 25% 50%;
+}
+._hamburger-content ._hamburger-content-main {
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  background-color: var(--colors);
+  flex: 1;
+  gap: 1rem;
+  overflow: auto;
+}
+@media (min-width: 768px) {
+  ._hamburger-content ._hamburger-content-main {
+    padding: 10rem 4rem;
+  }
+}
+._hamburger-content ._hamburger-content-main a, ._hamburger-content ._hamburger-content-main p {
+  padding: 0;
+  margin: 0;
+  font-family: var(--primtext), sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  ._hamburger-content ._hamburger-content-main a, ._hamburger-content ._hamburger-content-main p {
+    font-size: 4rem;
+  }
+}
+._hamburger-content ._hamburger-content-main i {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  ._hamburger-content ._hamburger-content-main i {
+    font-size: 2rem;
+  }
+}
+._hamburger-content ._hamburger-content-main ._link-wrapper {
+  cursor: pointer;
+}
+._hamburger-content ._hamburger-content-main ._link-wrapper ._unlink-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+._hamburger-content ._hamburger-content-main ._link-wrapper ._sublinks-wrapper-grid {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 0fr;
+}
+._hamburger-content ._hamburger-content-main ._link-wrapper ._sublinks-wrapper-grid ._sublinks-wrapper {
+  margin: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+}
+._hamburger-content ._hamburger-content-main ._link-wrapper ._sublinks-wrapper-grid ._sublinks-wrapper ._sublink {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  ._hamburger-content ._hamburger-content-main ._link-wrapper ._sublinks-wrapper-grid ._sublinks-wrapper ._sublink {
+    font-size: 2rem;
+  }
+}
+._hamburger-content ._hamburger-content-main ._link-wrapper ._sublinks-wrapper-grid ._sublinks-wrapper ._sublink i {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=behave.css.map */

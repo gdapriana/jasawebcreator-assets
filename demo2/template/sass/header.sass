@@ -1,0 +1,61 @@
+@use 'lib' as v
+
+#_header
+  width: 100%
+  @include v.flx()
+  background-color: var(--white-col-1)
+  padding: 1.6rem
+
+  ._header-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($j: space-between)
+    
+    ._brand
+      img
+        width: 168px
+
+    ._navs
+      display: none
+      @media (min-width: v.$md )
+        @include v.flx($g: 1.6rem)
+
+      ._nav
+        text-transform: uppercase
+        padding: .4rem 0
+        @include v.trans()
+        &:first-child
+          color: var(--blue-col)
+          border-bottom: 1px solid var(--blue-col)
+
+        &:hover
+          color: var(--blue-col)
+
+    ._hamburger
+      padding: 8px 12px
+      color: var(--text-col-2)
+      border: 1px solid rgba(0, 0, 0, 0.1)
+      cursor: pointer
+      @media (min-width: v.$md )
+        display: none
+
+._hamburger-content
+  overflow: hidden
+  height: 0
+  width: 100%
+  @include v.pad()
+  ._navs
+    @include v.flx($d: column, $j: start, $i: stretch)
+
+
+    ._nav
+      text-transform: uppercase
+      padding: .4rem 0
+      @include v.trans()
+      &:first-child
+        color: var(--blue-col)
+        border-bottom: 1px solid var(--blue-col)
+
+      &:hover
+        color: var(--blue-col)
+

@@ -1,0 +1,394 @@
+{
+  "data": {
+    "site_position": "home",
+    "web": {
+      "site_name": "DEMO",
+      "site_desc": "",
+      "site_keyword": "luxury resort Bali, Canggu beach resort, 4-star hotel Bali, boutique resort Bali, beachfront hotel Canggu, Echo Beach hotel, Batu Bolong Bali, Bali vacation resort",
+      "site_logo": "https://jwc.gotra-resources.my.id/web-upload/1742790959-24-03-2025-rgXctxjiNLBz7Ml9n4dHQfqa3SJ2CKp5.png",
+      "site_logo_alternative": "https://jwc.gotra-resources.my.id/web-upload/1742791133-24-03-2025-rcH53iBWJjA96d2K4tY8ESyLOQpI0qCU.webp",
+      "site_favicon": "https://jwc.gotra-resources.my.id/web-upload/1742790964-24-03-2025-U1J8GPZ2afRotnqFIEDbrH7lsKpXmycQ.png",
+      "site_about": "DEMO",
+      "site_domain": "http://demo3.jasawebcreator.com/",
+      "hide_price": "0",
+      "currency": "$",
+      "language": [""],
+      "image_product": "1",
+      "image_blog": "0",
+      "fb_moderator": [""],
+      "layout_type": "boxed",
+      "layout_header": "type1",
+      "layout_footer": "type1"
+    },
+    "themecolor": [],
+    "company": {
+      "company_id": "1096",
+      "company_email": "reservation@sensecanggubeach.com",
+      "company_phone": "+6281139804442",
+      "company_image": "https://jwc.gotra-resources.my.id/web-upload/1735187966-26-12-2024-B7FDRN3LeGmbrOKzoPH2Cy8hlQpxfIn4.webp",
+      "company_name": "Crafting Quality, \u003Cspan\u003EBuilding Trust\u003C/span\u003E",
+      "company_desc": "\u003Cp\u003ECV. Taksu Bali is a trusted contractor in Bali specializing in villas, homes, and commercial projects. With years of experience, we deliver high-quality craftsmanship, personalized solutions, and timely project completion to bring your vision to life.\u003C/p\u003E",
+      "company_telp": "+6281139804442",
+      "company_address": "Jl. Munduk Kedungu No.55s, Pererenan, Kec. Mengwi, Kabupaten Badung, Bali"
+    },
+    "social": {
+      "facebook_url": "",
+      "googleplus_url": "",
+      "twitter_url": "",
+      "youtube_url": "",
+      "instagram_url": "https://www.instagram.com/sensecanggubeach/",
+      "bbm": "",
+      "line": "",
+      "whatsapp": "6281139804442",
+      "telegram": "",
+      "messenger": ""
+    },
+    "menu": {
+      "primary_menu": {
+        "15229": {
+          "parent": "0",
+          "label": "About Us",
+          "link": "http://demo3.jasawebcreator.com/about-us",
+          "language": "",
+          "id": "15229",
+          "child": {
+            "15270": {
+              "parent": "15229",
+              "label": "test",
+              "link": "#",
+              "language": "",
+              "id": "15270"
+            }
+          }
+        },
+        "15230": {
+          "parent": "0",
+          "label": "Rooms & Suites",
+          "link": "http://demo3.jasawebcreator.com/category/rooms-suites",
+          "language": "",
+          "id": "15230"
+        },
+        "15231": {
+          "parent": "0",
+          "label": "Experiences",
+          "link": "http://demo3.jasawebcreator.com/category/experiences",
+          "language": "",
+          "id": "15231"
+        },
+        "15232": {
+          "parent": "0",
+          "label": "Destinations",
+          "link": "http://demo3.jasawebcreator.com/article-category/nearby-attractions",
+          "language": "",
+          "id": "15232"
+        },
+        "15233": {
+          "parent": "0",
+          "label": "Blogs",
+          "link": "http://demo3.jasawebcreator.com/article-category/blog-news",
+          "language": "",
+          "id": "15233"
+        }
+      }
+    },
+    "addon": {
+      "header_script": "",
+      "footer_script": "",
+      "chatpop_status": null,
+      "chatpop_picture": null,
+      "chatpop_name": null,
+      "chatpop_message": null
+    },
+    "google_maps": "",
+    "review": [
+      {
+        "id": "1454",
+        "company_id": "1096",
+        "product_id": "0",
+        "img": "",
+        "img_url": "",
+        "message": "There’s not enough words to describe this experience every member and I mean everyone was super friendly and willing to make sure my wife and I had the best experience together from having dinner reservations to the bar and even giving us a wake up call to let us know our breakfast has arrived which was amazing!!! We will surely be back and I think I have found a gem in Bali for sure",
+        "guest": " Yvng Nelly",
+        "title": "",
+        "draft": "0",
+        "created_at": "2025-03-25 14:27:30",
+        "updated_at": null,
+        "total_post": "10"
+      },
+      {
+        "id": "1455",
+        "company_id": "1096",
+        "product_id": "0",
+        "img": "",
+        "img_url": "",
+        "message": "Very beautiful hotel very close to the beach, with well-kept territory and a huge swimming pool, which has a bar and a cool round sofa integrated into it. From the rooms on the first floor you can go directly to the pool) The bar has very tasty cocktails, especially pina colada, and you can order breakfast on a sunbed, or also you can order a floating breakfast in a basket",
+        "guest": "Anna Korchagina",
+        "title": "",
+        "draft": "0",
+        "created_at": "2025-03-25 14:27:59",
+        "updated_at": null,
+        "total_post": "10"
+      },
+      {
+        "id": "1456",
+        "company_id": "1096",
+        "product_id": "0",
+        "img": "",
+        "img_url": "",
+        "message": "A 40 meter square bed room that is very comfy and really clean. My room was 5119 and it has a balcony and pool view. I stayed for 2 nights in this hotel, close to Echo beach, Seseh and Canggu beach. You choose your own breakfast from the menu, such as nagi goreng / bakmi goreng, avocado toast, healthy bowl etc. They provide fruits, juices, breads , coffee and tea as well.",
+        "guest": "Debby Lukito G.",
+        "title": "",
+        "draft": "0",
+        "created_at": "2025-03-25 14:28:35",
+        "updated_at": "2025-03-25 14:31:35",
+        "total_post": "10"
+      },
+      {
+        "id": "1457",
+        "company_id": "1096",
+        "product_id": "0",
+        "img": "",
+        "img_url": "",
+        "message": "My wife and I stayed at Sense Beach Hotel for five days in March. It's on a fairly quiet street, about half a kilometr from the beach. The hotel is clean and well kept. Breakfast had lots of good choices, and the staff were very friendly. We also enjoyed the massages. Be sure to try the restaurants nearby: Little Frenchie Bistro and The Flow Bali. We'd stay here again if we visit Canggu.",
+        "guest": "Val Laval",
+        "title": "",
+        "draft": "0",
+        "created_at": "2025-03-25 14:29:00",
+        "updated_at": null,
+        "total_post": "10"
+      },
+      {
+        "id": "1458",
+        "company_id": "1096",
+        "product_id": "0",
+        "img": "",
+        "img_url": "",
+        "message": "What a beautiful hotel. All staff were super friendly and helpful, made us feel very welcome. The room was cleaned daily, and we enjoyed the pool/bar area. Highly recommend if you're in Canggu for a few days.",
+        "guest": " Agata Anna",
+        "title": "",
+        "draft": "0",
+        "created_at": "2025-03-25 14:29:46",
+        "updated_at": null,
+        "total_post": "10"
+      },
+      {
+        "id": "1459",
+        "company_id": "1096",
+        "product_id": "0",
+        "img": "",
+        "img_url": "",
+        "message": "Rooms, pool and restaurant are all lovely! The location is on a nice quiet road that leads to the beach, but still very close to the main area of Canggu. However the absolute highlight was the staff! Every experience with a staff member, from the pool bar service to the driver for our airport transfer, was warm and friendly. Thank you Sense for your hospitality and awesome service!",
+        "guest": " Eliza Driffill",
+        "title": "",
+        "draft": "0",
+        "created_at": "2025-03-25 14:30:19",
+        "updated_at": null,
+        "total_post": "10"
+      },
+      {
+        "id": "1460",
+        "company_id": "1096",
+        "product_id": "0",
+        "img": "",
+        "img_url": "",
+        "message": "Really like the hotel concept with a strategic location close to the beach, especially the swimming pool which is also the best for relaxing with friends or loved ones.",
+        "guest": " Samsul Darmawan",
+        "title": "",
+        "draft": "0",
+        "created_at": "2025-03-25 14:30:55",
+        "updated_at": null,
+        "total_post": "10"
+      },
+      {
+        "id": "1461",
+        "company_id": "1096",
+        "product_id": "0",
+        "img": "",
+        "img_url": "",
+        "message": "Great experience! Super friendly staff, great breakfast, and only 10mins walk to the beach. The only thing I didn't like is the doors to the bathrooms..they had fully see through windows which leaves both the toilet and shower visible to occupants within the room. These windows should be frosted for better privacy.",
+        "guest": "Asmeet Prakash",
+        "title": "",
+        "draft": "0",
+        "created_at": "2025-03-25 14:32:44",
+        "updated_at": null,
+        "total_post": "10"
+      },
+      {
+        "id": "1462",
+        "company_id": "1096",
+        "product_id": "0",
+        "img": "",
+        "img_url": "",
+        "message": "Loved the resort. Always clean, super friendly staff. The location wasn’t the best. 10 min walk to the beach, far from any shops and restaurants",
+        "guest": " Giuliano D'Angelo",
+        "title": "",
+        "draft": "0",
+        "created_at": "2025-03-25 14:33:16",
+        "updated_at": null,
+        "total_post": "10"
+      },
+      {
+        "id": "1463",
+        "company_id": "1096",
+        "product_id": "0",
+        "img": "",
+        "img_url": "",
+        "message": "Everything was perfect! From the arrival and the kindness of the staff to welcome us, to the rooms which were very clean and very big and to the amazing view of the swimming pool. The breakfast was also very good and had different options, very much recommended and I would come back! :)",
+        "guest": "Alessandro Cascavilla",
+        "title": "",
+        "draft": "0",
+        "created_at": "2025-03-25 14:33:58",
+        "updated_at": "2025-03-25 14:34:30",
+        "total_post": "10"
+      }
+    ],
+    "category": [
+      {
+        "id": "6660",
+        "company_id": "1096",
+        "name": "Rooms & Suites",
+        "image": "",
+        "content": "",
+        "slug": "rooms-suites",
+        "seo_title": "",
+        "seo_desc": "",
+        "seo_keywords": "",
+        "custom_field_1": "",
+        "custom_field_2": "",
+        "custom_field_3": "",
+        "created_at": "2025-03-24 10:24:40",
+        "updated_at": "2025-03-24 12:37:08",
+        "total_post": "6"
+      },
+      {
+        "id": "6675",
+        "company_id": "1096",
+        "name": "Experiences",
+        "image": "",
+        "content": "",
+        "slug": "experiences",
+        "seo_title": "",
+        "seo_desc": "",
+        "seo_keywords": "",
+        "custom_field_1": "",
+        "custom_field_2": "",
+        "custom_field_3": "",
+        "created_at": "2025-03-26 10:34:08",
+        "updated_at": "2025-03-27 14:02:56",
+        "total_post": "3"
+      }
+    ],
+    "blog_category": [
+      {
+        "id": "1200",
+        "company_id": "1096",
+        "name": "Blog & News",
+        "image": "",
+        "content": "",
+        "slug": "blog-news",
+        "seo_title": null,
+        "seo_desc": null,
+        "seo_keywords": null,
+        "created_at": "2024-10-29 15:23:15",
+        "updated_at": null,
+        "total_post": "4"
+      },
+      {
+        "id": "1333",
+        "company_id": "1096",
+        "name": "Nearby Attractions",
+        "image": "",
+        "content": "",
+        "slug": "nearby-attractions",
+        "seo_title": "",
+        "seo_desc": "",
+        "seo_keywords": "",
+        "created_at": "2025-03-25 14:22:46",
+        "updated_at": null,
+        "total_post": "5"
+      }
+    ],
+    "video_category": [
+      {
+        "id": "312",
+        "company_id": "1096",
+        "name": "Uncategory",
+        "image": null,
+        "content": null,
+        "slug": "uncategory",
+        "updated_at": null,
+        "created_at": "2024-06-25 13:05:08",
+        "total_post": "1"
+      }
+    ],
+    "gallery_category": [
+      {
+        "id": "1344",
+        "company_id": "1096",
+        "name": "Our Customers",
+        "image": "",
+        "content": "\u003Cp\u003E\u003Cimg src=\"https://gotra.sgp1.digitaloceanspaces.com/web-upload/1718003818-10-06-2024-3gcr6nFjP9KGMNYIZ57f0QoTDRJUXzWE.jfif\" width=\"330\" height=\"440\" caption=\"false\" /\u003E\u003C/p\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https://gotra.sgp1.digitaloceanspaces.com/web-upload/1718003820-10-06-2024-oa5r7fODuFcVY8R3AKJt40XTvwjbULxE.jfif\" alt=\"\" width=\"330\" height=\"440\" /\u003E\u003C/p\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https://gotra.sgp1.digitaloceanspaces.com/web-upload/1718003815-10-06-2024-AuO3fyeHGTmVntdDZslzwLjPEJ9BFq5K.jfif\" alt=\"\" width=\"330\" height=\"440\" /\u003E\u003C/p\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https://gotra.sgp1.digitaloceanspaces.com/web-upload/1718003813-10-06-2024-YnzgvHARtf2GqjQlrmDCBiuXM9JaK3cy.jfif\" alt=\"\" width=\"330\" height=\"248\" /\u003E\u003C/p\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https://gotra.sgp1.digitaloceanspaces.com/web-upload/1718003810-10-06-2024-eRnJvXZN0tsBEFwK48uozIijQML5PVpA.jfif\" alt=\"\" width=\"330\" height=\"440\" /\u003E\u003C/p\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https://gotra.sgp1.digitaloceanspaces.com/web-upload/1718003809-10-06-2024-aK85ho9btznxE3s2CkTu47Oe0VfwAMSd.jfif\" alt=\"\" width=\"330\" height=\"587\" /\u003E\u003C/p\u003E",
+        "slug": "our-customers",
+        "created_at": "2024-06-10 15:16:17",
+        "updated_at": "2025-01-03 15:28:17",
+        "total_post": "14"
+      }
+    ]
+  },
+  "component": [
+    {
+      "setting": {
+        "id": "11059",
+        "collection_id": "1199",
+        "company_id": "1096",
+        "title": "slider",
+        "subtitle": "",
+        "subtitle2": "",
+        "component": "slider",
+        "number_post": "0",
+        "criteria": "",
+        "html": "",
+        "grid": "1",
+        "language": "",
+        "parent": "0",
+        "page_id": "1418",
+        "sort": "1",
+        "updated_at": null,
+        "created_at": "2025-04-05 17:03:25"
+      },
+      "file": "slider",
+      "data": {
+        "1": {
+          "img": "https://jwc.gotra-resources.my.id/web-upload/1743049840-27-03-2025-5nvN0mz6HfYWCUSZAMVa7o4xO1Fsk9cD.webp",
+          "title": "",
+          "text": "",
+          "text_url": "",
+          "url": ""
+        },
+        "2": {
+          "img": "https://jwc.gotra-resources.my.id/web-upload/1743049698-27-03-2025-s80dxnrDR6ShpjueF7lT4cUbqX5vwaJZ.webp",
+          "title": "",
+          "text": "",
+          "text_url": "",
+          "url": ""
+        },
+        "3": {
+          "img": "https://jwc.gotra-resources.my.id/web-upload/1743049704-27-03-2025-hOomN8FERVtpaD1Z6bLjSvnrefIkY4BG.webp",
+          "title": "",
+          "text": "",
+          "text_url": "",
+          "url": ""
+        },
+        "4": {
+          "img": "https://jwc.gotra-resources.my.id/web-upload/1743050182-27-03-2025-QSknVMaRdrP05F6KxftH9bpNeBYwO18X.webp",
+          "title": "",
+          "text": "",
+          "text_url": "",
+          "url": ""
+        }
+      }
+    }
+  ],
+  "text": "Success 200",
+  "type": "success"
+}

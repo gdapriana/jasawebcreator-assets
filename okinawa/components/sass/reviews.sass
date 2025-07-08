@@ -1,0 +1,50 @@
+@use "lib" as v
+
+#_reviews-root
+  background-color: var(--colors)
+  width: 100%
+  @include v.flx()
+  @include v.sectionPad()
+
+  *
+    padding: 0
+    margin: 0
+
+  ._wrapper
+    width: 100%
+    @include v.flx($d: column, $g: 2rem)
+    @include v.pad()
+
+    ._header
+      @include v.headerTemplateRedBg()
+
+
+    ._content
+      width: 100%
+      border-radius: 1rem
+
+      .slick-list
+        border-radius: 1rem
+
+      ._card
+        background-color: white
+        margin: 0 10px
+        padding: 2rem
+        border-radius: 1rem
+        @include v.flx($d: column, $i: start, $j: start, $g: .6rem)
+
+        ._user
+          @include v.flx($g: .6rem)
+
+          ._img-profile
+            width: 60px
+            aspect-ratio: 1/1
+            border-radius: 999em
+
+          ._name
+            font-weight: 500
+            color: rgba(0, 0, 0, 0.8)
+
+          ._rating
+            i
+              color: orange

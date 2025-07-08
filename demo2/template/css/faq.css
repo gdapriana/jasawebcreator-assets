@@ -1,0 +1,77 @@
+#_faq {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 0;
+  padding: 100px 0;
+  background-color: #f0f4f6;
+}
+#_faq ._faq-wrapper {
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 4rem;
+}
+#_faq ._faq-wrapper ._header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+#_faq ._faq-wrapper ._header ._title {
+  font-size: 32px;
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-col-1);
+}
+#_faq ._faq-wrapper ._header ._desc {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-col-1);
+  line-height: 1.8;
+}
+#_faq ._faq-wrapper ._content {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, auto);
+}
+@media (min-width: 768px) {
+  #_faq ._faq-wrapper ._content {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+#_faq ._faq-wrapper ._content ._content-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+}
+#_faq ._faq-wrapper ._content ._content-card ._card-title {
+  font-size: 20px;
+  color: var(--text-col-1);
+  font-weight: 400;
+}
+#_faq ._faq-wrapper ._content ._content-card ._card-desc {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-col-1);
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=faq.css.map */

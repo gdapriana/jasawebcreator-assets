@@ -1,0 +1,65 @@
+@use 'lib' as v
+
+#_reviews
+  width: 100%
+  @include v.flx($d: column, $j: start, $i: stretch)
+  padding: 100px 0
+  background-color: #f0f4f6
+
+  .slick-slide
+    margin: 0 27px
+
+  .slick-list
+    margin: 0 -27px
+
+  ._reviews-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: stretch, $g: 2rem)
+
+    ._header
+      @include v.flx($d: column)
+
+      ._title
+        @include v.heading()
+        text-align: center
+
+      ._desc
+        @include v.subtext()
+        max-width: 800px
+        text-align: center
+
+    ._content
+      @include v.flx($g: 0)
+      width: 100%
+
+      ._card
+        @include v.flx($d: column)
+        background-color: white
+        padding: 2rem
+
+        ._profile
+          @include v.flx()
+          background-color: white
+          padding: 4px
+          border-radius: 999em
+          overflow: hidden
+          img
+            width: 50px
+            aspect-ratio: 1/1
+            border-radius: 999em
+
+        ._stars
+          @include v.flx($g: 0)
+          color: orange
+          font-size: .8rem
+
+        ._title
+          font-weight: 600
+          font-size: 20px
+          color: var(--text-col-1)
+          text-align: center
+
+        ._desc
+          @include v.subtext($lh: 1.4)
+          text-align: center

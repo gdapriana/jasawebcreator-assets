@@ -1,0 +1,123 @@
+#howwedoit {
+  width: 100%;
+  background-color: white;
+}
+#howwedoit ._howwedoit-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-header ._howwedoit-welcome {
+  position: relative;
+  padding: 2rem;
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-header ._howwedoit-welcome ._welcome-wavy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-header ._howwedoit-welcome span {
+  color: var(--colors);
+  font-weight: 600;
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-header ._howwedoit-title {
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-size: 30px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #howwedoit ._howwedoit-wrapper ._howwedoit-header ._howwedoit-title {
+    font-size: 54px;
+  }
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-content {
+  width: 90%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  grid-template-rows: repeat(4, auto);
+  padding-bottom: 4rem;
+}
+@media (min-width: 500px) {
+  #howwedoit ._howwedoit-wrapper ._howwedoit-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    grid-template-rows: repeat(2, auto);
+  }
+}
+@media (min-width: 1100px) {
+  #howwedoit ._howwedoit-wrapper ._howwedoit-content {
+    gap: 6rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+  }
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-content ._howwedoit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  gap: 1rem;
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-content ._howwedoit-card:hover ._card-number ._card-number-inside {
+  transform: translateY(0);
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-content ._howwedoit-card ._card-line {
+  position: absolute;
+  right: -50%;
+  top: 30%;
+  display: none;
+  bottom: 70%;
+}
+@media (min-width: 1100px) {
+  #howwedoit ._howwedoit-wrapper ._howwedoit-content ._howwedoit-card ._card-line {
+    display: flex;
+  }
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-content ._howwedoit-card ._card-number {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999em;
+  padding: 6px;
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-content ._howwedoit-card ._card-number ._card-number-inside {
+  width: 50px;
+  transition: all ease-in-out 0.5s;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+  font-weight: 600;
+  transform: translateY(6px);
+  font-size: 20px;
+  color: white;
+  border-radius: 999em;
+}
+#howwedoit ._howwedoit-wrapper ._howwedoit-content ._howwedoit-card ._card-desc {
+  font-size: 18px;
+  color: var(--text-color2);
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+}
+
+/*# sourceMappingURL=how-we-doit.css.map */

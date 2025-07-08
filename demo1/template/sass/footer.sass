@@ -1,0 +1,110 @@
+@use 'lib' as v
+
+#footer
+    width: 100%
+    background-color: white
+    padding: 3rem 0
+    @include v.disflex($direction: column)
+    
+    ._footer-wrapper
+        padding: 3rem 0
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+        width: 80%
+        @include v.disflex($direction: column, $justify: start, $items: stretch)
+        gap: 4rem
+
+        @media (min-width: 768px)
+            @include v.disflex($direction: row, $justify: center, $items: center)
+
+        & > div
+            @include v.disflex($direction: column, $justify: start, $items: start)
+            gap: 1rem
+            @media (min-width: 768px)
+                width: 25%
+            
+        ._footer-sec-1
+            @include v.disflex($direction: column, $justify: start, $items: start)
+            gap: 1.6rem
+
+            ._footer-brand
+                img
+                    width: 150px
+
+            ._footer-desc
+                font-size: 16px
+                font-weight: 500
+                line-height: 24px
+
+            ._footer-socials-wrapper
+                @include v.disflex($direction: column, $justify: start, $items: start)
+                gap: .6rem
+
+                ._socials-title
+                    font-size: 15px
+                    font-weight: 600
+                    line-height: 12px
+
+                ._footer-socials
+                    @include v.disflex($justify: start)
+                    gap: .4rem
+
+                    a
+                        width: 37px
+                        aspect-ratio: 1/1
+                        @include v.disflex()
+                        border: 1px solid rgba(12,19,56,.1)
+                        border-radius: 6px
+                        color: var(--text-color2)
+
+
+        ._setion-title
+            font-size: 20px
+            font-weight: 700
+            line-height: 1.2
+
+        ._list-wrapper
+            @include v.disflex($direction: column, $justify: start, $items: start)
+            gap: .6rem
+            margin-left: 1rem
+
+            a
+                font-size: 16px
+                color: var(--text-color2)
+
+        ._footer-sec-4
+            ._sec4-desc
+                font-size: 15px
+                color: var(--text-color2)
+
+            ._sec4-input
+                width: 100%
+                @include v.disflex()
+                height: 54px
+                gap: .8rem
+                padding: 1rem
+                border: 1px solid rgba(12,19,56,.14)
+                border-radius: 10px
+
+                input
+                    flex: 1
+                    border: none
+                    outline: none
+                    font-family: var(--primtext)
+                    font-size: 16px
+
+            ._sec4-cta
+                font-weight: 600
+                font-size: 16px
+                line-height: 14px
+                background-color: var(--colors)
+                padding: 15px 32px
+                border-radius: 6px
+                color: white
+    ._footer-cpy
+        @include v.disflex()
+        padding: 2rem
+        font-weight: 500
+        color: var(--text-color2)
+        font-size: 15px
+        span
+            color: var(--colors)

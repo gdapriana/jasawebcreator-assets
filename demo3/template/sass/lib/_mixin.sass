@@ -1,0 +1,33 @@
+@mixin disflex($d: row, $j: center, $i: center, $g: 1rem)
+  display: flex
+  flex-direction: $d
+  justify-content: $j
+  align-items: $i
+  gap: $g
+
+@mixin disgrid($r: 1, $sr: 1fr, $c: 1, $sc: 1fr, $g: 1rem)
+  display: grid
+  gap: $g
+  grid-template-columns: repeat($c, $sc)
+  grid-template-rows: repeat($r, $sr)
+
+@mixin gradback($cola: #146EF5, $colb: #429AFF)
+  background-color: transparent
+  background-image: linear-gradient(45deg, $cola 40%, $colb 100%)
+
+@mixin heading($fs: 32px, $fw: 700, $lh: 1.1em, $ls: 0.5px, $fm: "Manrope", $cl: #0E0B3D)
+  font-size: $fs
+  font-weight: $fw
+  line-height: $lh
+  letter-spacing: $ls
+  font-family: $fm, sans-serif
+  color: $cl
+
+@mixin subtext($fs: 14px, $fw: 400, $fm: "Inter", $cl: #0E0B3DA6)
+  font-size: $fs
+  font-weight: $fw
+  font-family: $fm, sans-serif
+  color: $cl
+
+@mixin trans($mode: all, $easing: ease-in-out, $duration: .3s)
+  transition: $mode $easing $duration

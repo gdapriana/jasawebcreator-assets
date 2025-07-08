@@ -1,0 +1,123 @@
+@use "lib" as v
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap')
+
+*
+  padding: 0
+  margin: 0
+
+body
+  font-family: "Raleway", sans-serif
+
+#_why-root
+  width: 100%
+  padding-top: clamp(8rem, 2vw, 12rem)
+  padding-bottom: clamp(8rem, 2vw, 12rem)
+
+  ._why-wrapper
+    @include v.disflex($direction: column, $justify: start, $align: stretch)
+    gap: 2rem
+    @media (min-width: v.$md)
+      gap: 3rem
+      @include v.disflex($direction: row, $justify: center, $align: stretch)
+    & > div
+      flex: 1
+      @media (min-width: v.$md)
+        flex: 0.5
+
+    ._why-title-wrapper
+      @include v.disflex($direction: column, $justify: center, $align: start)
+      position: relative
+
+      ._why-title-header
+        @include v.disflex($direction: column, $justify: start, $align: start)
+        gap: clamp(.6rem, 2vw, .8rem)
+        & span
+          color: v.$red
+          font-weight: bold
+        & h2
+          width: 90%
+          @media (min-width: v.$md)
+            width: 60%
+
+      ._why-title-images-wrapper
+        @include v.disflex()
+        gap: 2rem
+        flex-wrap: wrap
+        margin-top: 2rem
+
+        ._why_title-image
+          width: 220px
+          object-fit: cover
+          aspect-ratio: 4/4
+          border-radius: 1rem
+
+        ._why-title-user-desc
+          @include v.disflex($direction: column)
+
+          ._why-users-wrapper
+            @include v.disflex()
+            width: 200px
+
+            ._why-user
+              @include v.disflex()
+              width: 50px
+              border: 3px solid white
+              aspect-ratio: 4/4
+              border-radius: 999em
+              object-fit: cover
+              &:last-child
+                background-color: red
+                color: white
+                padding: 8px
+
+      ._why-title-desc
+        font-weight: bold
+        margin-top: 1rem
+        color: red
+
+
+    ._why-card-wrapper
+      @include v.disflex($align: start)
+      flex-wrap: wrap
+      gap: clamp(.8rem, 2vw, 1rem)
+      & > div
+        flex: 1
+        gap: clamp(.8rem, 2vw, 1rem)
+        @include v.disflex($direction: column, $justify: start, $align: stretch)
+
+        ._why-card
+          background-color: v.$black
+          color: white
+          position: relative
+          padding: clamp(1rem, 2vw, 2rem)
+          @include v.disflex($direction: column, $justify: start, $align: stretch)
+          gap: clamp(.8rem, 2vw, 1rem)
+          overflow: hidden
+
+          ._why-bookmark
+            position: absolute
+            top: -2px
+            right: 20px
+            color: v.$red
+            font-size: clamp(1rem, 2vw, 2rem)
+
+          ._why-card-icon
+            font-size: clamp(2rem, 2vw, 5rem)
+
+          ._why-card-title
+            font-size: clamp(1.2rem, 2vw, 1.4rem)
+            line-height: 150%
+            font-weight: bold
+
+          ._why-card-description
+            font-size: clamp(.9rem, 2vw, 1rem)
+            line-height: 150%
+            color: gray
+
+      ._why-card-wrapper-right
+        margin-top: 2rem
+
+
+.container-global
+  padding-left: 7%
+  padding-right: 7%

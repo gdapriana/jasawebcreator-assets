@@ -1,0 +1,40 @@
+@use 'lib' as v
+
+#_love
+  width: 100%
+  @include v.flx($d: column, $j: start, $i: stretch, $g: 0)
+  padding: 100px 0 0 0
+  background-color: #f0f4f6
+
+  ._love-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: stretch, $g: 5rem)
+    @media (min-width: 1000px)
+      @include v.flx($d: row-reverse, $j: center, $i: center)
+
+    ._header
+      @include v.flx($d: column, $j: start, $i: start)
+      @media (min-width: v.$md)
+        width: 50%
+
+
+      ._icon
+        color: #11aff1
+        font-size: 3rem
+
+      ._title
+        @include v.heading()
+
+      ._desc
+        @include v.subtext()
+
+    ._content
+      overflow: hidden
+      @include v.flx()
+      @media (min-width: v.$md)
+        width: 50%
+
+      ._phone
+        width: 70%
+        margin-bottom: -50%

@@ -1,0 +1,136 @@
+@use "lib" as v
+
+#_header-root
+  width: 100%
+  @include v.flx($d: column)
+  font-family: var(--primtext), sans-serif
+
+  ._top, ._bottom
+    width: 100%
+    @include v.flx()
+
+    ._wrapper
+      width: 100%
+      @include v.pad()
+
+  ._top
+    color: white
+    padding: 1.6rem 0
+
+    ._wrapper
+      @include v.flx($j: space-between, $g: 1rem)
+
+      ._brand
+        img
+          width: 160px
+          @media (min-width: v.$minimumres)
+            width: 200px
+
+      ._searchbar
+        max-width: 600px
+        width: 100%
+        background-color: rgba(0, 0, 0, 0.05)
+        display: none
+        padding: .4rem .4rem .4rem 1.2rem
+        border-radius: 999em
+        border: 1px solid rgba(0, 0, 0, 0.1)
+        @media (min-width: v.$minimumres)
+          @include v.flx($g: .4rem)
+
+        label
+          flex: 1
+          input
+            width: 100%
+            border: none
+            outline: none
+            background-color: transparent
+
+        button
+          @include v.flx($g: 4px)
+          padding: .2rem .8rem
+          border: none
+          border-radius: 999em
+          background-color: var(--colors)
+          color: white
+
+      ._socials
+        display: none
+        margin-left: auto
+        @media (min-width: v.$minimumres)
+          margin-left: 0
+
+
+        @media (min-width: v.$sminimumres)
+          @include v.flx($g: .4rem)
+        ._social
+          color: white
+          background-color: var(--colors)
+          width: 32px
+          text-decoration: none
+          border-radius: 999em
+          @include v.flx()
+          aspect-ratio: 1/1
+
+      ._hamburger-btn
+        background-color: var(--colors)
+        color: white
+        @media (min-width: v.$minimumres)
+          display: none
+
+      ._canvas-logo
+        width: 160px
+
+      .offcanvas-body
+        ._navigations
+          .nav-item
+            a:hover
+              color: var(--colors)
+        ._cart-cta
+          @include v.flx($g: .4rem)
+          margin-top: 2rem
+
+          a
+            text-decoration: none
+            color: white
+            background-color: var(--colors)
+            padding: .4rem 1rem
+            font-size: v.$textsm
+            border-radius: 999em
+
+
+  ._bottom
+    background-color: var(--colors)
+    color: white
+    padding: 1.6rem 0
+    display: none
+    @media (min-width: v.$minimumres)
+      @include v.flx()
+
+    ._wrapper
+      @include v.flx($j: space-between, $i: center)
+
+      ._navigations
+        @include v.flx($g: 1rem)
+
+        a
+          font-size: v.$textsm
+
+      ._cart-cta
+        @include v.flx($g: 1rem)
+        ._cart
+          color: var(--colors)
+          border-radius: 999em
+          font-size: v.$textsm
+          padding: .6rem
+          text-decoration: none
+          background-color: white
+          @include v.flx()
+          aspect-ratio: 1/1
+
+        ._cta
+          color: var(--colors)
+          border-radius: 999em
+          padding: .4rem 1rem
+          font-size: v.$textsm
+          text-decoration: none
+          background-color: white

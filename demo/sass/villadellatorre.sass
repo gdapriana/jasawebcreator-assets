@@ -1,0 +1,149 @@
+@use 'lib' as v
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap')
+
+:root
+  --primtext: "Jost", sans-serif
+  --subtext: "Jost", sans-serif
+  --colors: #d8732b
+
+
+#_header-root *
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  color: white !important
+
+.container-global
+  padding-left: 7% !important
+  padding-right: 7% !important
+
+body
+  font-family: "Jost", sans-serif
+
+#_header-root
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 9999
+
+  ._header-wrapper
+    padding-top: 1rem
+    padding-bottom: 1rem
+    @include v.disflex($justify: space-between)
+
+    ._header-brand
+      img
+        width: 100px
+        object-fit: cover
+        @media (min-width: v.$md)
+          width: 140px
+
+    ._header-hamburger-btn
+      @include v.disflex($direction: column, $justify: center, $align: center)
+      gap: 4px
+      border-radius: 999em
+      background-color: rgba(255, 255, 255, 0.2)
+      padding: 8px
+      width: 50px
+      position: relative
+      aspect-ratio: 4/4
+      cursor: pointer
+      transform: scale(1)
+
+      ._hamburger-line
+        position: absolute
+        transform: translate(-50%, -50%)
+        width: 60%
+        height: 2px
+        transform-origin: center
+        background-color: white
+        &:first-child
+          top: 45%
+          left: 50%
+          z-index: 1
+        &:last-child
+          top: 55%
+          left: 50%
+          z-index: 2
+
+    ._header-book-btn
+      background-color: var(--colors)
+      padding: .6rem 1rem
+      cursor: pointer
+      @media (min-width: v.$md)
+        padding: .8rem 1.2rem
+        font-size: 18px
+
+._hamburger-content-root
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  display: none
+  z-index: 999
+
+  ._hamburger-content-left
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    background-color: black
+    height: 100%
+
+
+  ._hamburger-content-right
+    position: absolute
+    top: 0
+    right: 0
+    width: 0
+    background-color: black
+    height: 100%
+
+  ._hamburger-content-nav
+    position: absolute
+    left: 0
+    right: 0
+    width: 100%
+    color: white
+    height: 100%
+    @include v.disflex($direction: column, $justify: center, $align: center)
+    gap: clamp(1rem, 2vw, 1.4rem)
+    z-index: 9999
+
+    ._link-wrapper
+      @include v.disflex($direction: column, $align: center, $justify: start)
+      gap: .2rem
+      ._link-underline
+        height: 2px
+        width: 0
+        margin-bottom: .2rem
+        background-color: white
+      &:hover ._link-underline
+        background-color: var(--colors)
+
+      ._link
+        font-size: 24px
+        text-transform: uppercase
+        @media (min-width: v.$md)
+          font-size: 32px
+        &:hover
+          color: var(--colors)
+
+      ._sublink-wrapper
+        display: none
+        margin-bottom: 2rem
+        flex-direction: column
+        justify-content: start
+        align-items: center
+
+        ._sublink
+          font-size: 24px
+          font-weight: 200
+
+
+
+    ._link-wrapper a
+      text-decoration: none
+      color: white

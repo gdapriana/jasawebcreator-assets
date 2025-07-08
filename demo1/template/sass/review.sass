@@ -1,0 +1,94 @@
+@use 'lib' as v
+
+#review
+    padding: 3rem 0
+    width: 100%
+    @include v.disflex($direction: column, $justify: start, $items: center)
+    gap: 6rem
+
+    ._review-header
+        width: 80%
+        @include v.disflex($direction: column, $justify: start, $items: center)
+        gap: .8rem
+        
+        ._review-title
+            font-size: 30px
+            text-align: center
+            font-weight: 700
+            @media (min-width: 768px)
+                font-size: 54px
+        
+        ._review-desc
+            text-align: center
+            font-size: 16px
+            font-weight: 500
+            line-height: 26px
+            color: var(--text-color2)
+
+    ._review-content 
+        position: relative
+        width: 100%
+        ._review-list
+            z-index: 2
+            @include v.disflex()
+
+            ._review-item
+                @include v.disflex($direction: column, $justify: start, $items: start)
+                width: 90vw
+                gap: 1.4rem
+                padding: 2rem
+                @media (min-width: 768px)
+                    @include v.disflex($direction: row, $justify: center, $items: center)
+                    padding: 1rem
+                    width: 60vw
+
+                ._review-userimg
+                    width: 100px
+                    aspect-ratio: 1/1
+                    border-radius: 999em
+                    @media (min-width: 768px)
+                        width: 160px
+
+                ._review-item-content
+                    @include v.disflex($direction: column, $justify: start, $items: start)
+                    gap: .8rem
+                    ._review-message
+                        color: #eaeaea
+                        font-weight: 500
+                        font-size: 18px
+                        line-height: 1.42
+                        @media (min-width: 768px)
+                            font-size: 24px
+
+                    i
+                        color: rgba(66,96,255,.2)
+
+                    ._user-detail
+                        @include v.disflex($direction: column, $justify: start, $items: start)
+                        gap: .2rem
+                        color: #eaeaea
+                        ._username
+                            font-size: 18px
+                            font-weight: 700
+
+        ._review-fix-bg
+            position: absolute
+            z-index: 1
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            @include v.disflex()
+
+            ._bg
+                background-color: var(--colors)
+                width: 90vw
+                height: 100%
+                @media (min-width: 768px)
+                    height: 150%
+                    width: 65vw
+                border-radius: 2rem
+
+
+
+

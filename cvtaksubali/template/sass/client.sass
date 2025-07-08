@@ -1,0 +1,113 @@
+@use 'lib' as v
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,100..900;1,100..900&family=Oooh+Baby&display=swap')
+
+:root
+    --colors: #D29F54
+    --decotext: "Oooh Baby", cursive
+    --primtext: "Italiana", sans-serif
+    --subtext: "Jost", sans-serif
+
+body 
+    margin: 0
+
+#_client-root-mobile *
+    padding: 0
+    letter-spacing: 0
+    margin: 0
+
+#_client-root-mobile
+    @include v.disflex($direction: column, $justify: start, $items: stretch)
+    @media (min-width: 768px)
+        display: none
+
+    ._client-header
+        padding: 2rem 7%
+        @include v.disflex($direction: column, $justify: center, $items: center)
+        gap: 0.4rem
+        transform: translateY(100px)
+
+        span._client-span
+            font-family: var(--decotext)
+            font-size: 18px
+            text-align: center
+
+        h2._client-title
+            font-family: var(--primtext)
+            font-size: 24px
+            text-align: center
+
+    ._client-image
+        padding: 2rem 7%
+        transform: translateY(100px)
+
+        img
+            width: 100%
+            aspect-ratio: 1/1
+            object-fit: cover
+
+    ._client-logos
+        background-color: var(--colors)
+        padding: 8rem 7% 4rem
+        gap: 2rem
+        @include v.disgrid($row: 3, $column: 3)
+
+        ._client-logo-wrapper
+            @include v.disflex()
+            padding: 1rem
+
+            img._client-logo
+                width: 100%
+
+
+
+#_client-root-desktop *
+    padding: 0
+    letter-spacing: 0
+    margin: 0
+
+#_client-root-desktop
+    display: none
+    gap: 8rem
+    @media (min-width: 768px)
+        @include v.disflex($direction: column, $justify: start, $items: stretch)
+
+
+    ._client-header
+        padding: 0 7%
+        @include v.disflex($direction: column, $justify: center, $items: center)
+
+        span._client-span
+            font-family: var(--decotext)
+            font-size: 24px
+            text-align: center
+
+        h2._client-title
+            font-family: var(--primtext)
+            font-size: 30px
+            text-align: center
+
+    ._client-main
+        @include v.disflex($justify: center, $items: stretch)
+        gap: 4rem
+        background-color: var(--colors)
+        padding: 5rem 7%
+
+        ._client-logos
+            @include v.disgrid($column: 3, $row: 3)
+            flex: 1
+
+            ._client-logo-wrapper
+                @include v.disflex()
+                padding: 1rem
+                img._client-logo
+                    width: 80%
+                    
+        ._client-image
+            flex: 1
+            @include v.disflex()
+            img
+                width: 100%
+                object-fit: cover
+                height: 170%
+
+

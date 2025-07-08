@@ -1,0 +1,65 @@
+@use "lib" as v
+
+#_blogs-root
+  width: 100%
+  @include v.flx()
+  @include v.sectionPad()
+  padding-bottom: 6rem
+
+  *
+    padding: 0
+    margin: 0
+
+  ._wrapper
+    width: 100%
+    @include v.flx($d: column, $g: 3rem)
+    @include v.pad()
+
+    ._header
+      @include v.headerTemplate()
+
+
+    ._content
+      display: flex
+      width: 100%
+
+      ._card
+        margin: 0 20px
+        padding: 1rem
+        @include v.flx($d: column, $j: start, $i: start, $g: .6rem)
+
+        ._cover
+          width: 100%
+          aspect-ratio: 16/12
+          object-fit: cover
+          object-position: top
+          border-radius: 1rem
+
+        ._uploaded
+          background-color: rgba(0, 0, 0, 0.1)
+          margin-top: 1rem
+          padding: .2rem .6rem
+          border-radius: 999em
+          color: rgba(0, 0, 0, 0.5)
+          font-family: var(--primtext), sans-serif
+          font-size: v.$textsm
+
+        ._title
+          font-size: v.$textlarge
+          font-weight: 600
+          font-family: var(--primtext), sans-serif
+          line-height: 1.5
+          color: rgba(0, 0, 0, 0.8)
+
+        ._description
+          color: rgba(0, 0, 0, 0.5)
+
+        ._cta
+          margin-left: auto
+          color: white
+          text-decoration: none
+          background-color: var(--colors)
+          padding: 1rem 1.6rem
+          border-radius: 1rem
+          font-weight: 600
+          margin-top: 1rem

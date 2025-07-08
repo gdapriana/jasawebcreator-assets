@@ -1,0 +1,112 @@
+#_blogs-root {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-bottom: 6rem;
+}
+#_blogs-root * {
+  padding: 0;
+  margin: 0;
+}
+#_blogs-root ._wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 7%;
+}
+#_blogs-root ._wrapper ._header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+#_blogs-root ._wrapper ._header ._pill {
+  background-color: var(--colors);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 999em;
+  font-family: var(--primtext), sans-serif;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1000px) {
+  #_blogs-root ._wrapper ._header ._pill {
+    font-size: 16px;
+  }
+}
+#_blogs-root ._wrapper ._header ._title {
+  font-family: var(--primtext), sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+#_blogs-root ._wrapper ._header ._description {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 700px;
+  font-family: var(--primtext), sans-serif;
+  font-size: 16px;
+}
+#_blogs-root ._wrapper ._content {
+  display: flex;
+  width: 100%;
+}
+#_blogs-root ._wrapper ._content ._card {
+  margin: 0 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.6rem;
+}
+#_blogs-root ._wrapper ._content ._card ._cover {
+  width: 100%;
+  aspect-ratio: 16/12;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 1rem;
+}
+#_blogs-root ._wrapper ._content ._card ._uploaded {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999em;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: var(--primtext), sans-serif;
+  font-size: 14px;
+}
+#_blogs-root ._wrapper ._content ._card ._title {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--primtext), sans-serif;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+}
+#_blogs-root ._wrapper ._content ._card ._description {
+  color: rgba(0, 0, 0, 0.5);
+}
+#_blogs-root ._wrapper ._content ._card ._cta {
+  margin-left: auto;
+  color: white;
+  text-decoration: none;
+  background-color: var(--colors);
+  padding: 1rem 1.6rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=blogs.css.map */

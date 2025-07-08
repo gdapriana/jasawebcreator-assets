@@ -1,0 +1,21 @@
+@use "../lib" as v
+
+#_hero-root
+  width: 100%
+  @include v.flx()
+  @include v.sectionPad()
+  background-color: var(--colors)
+
+  ._wrapper
+    width: 100%
+    @include v.flx($d: column)
+    @include v.pad()
+
+    ._title
+      font-family: var(--primtext), sans-serif
+      font-weight: 700
+      color: white
+
+    ._description
+      color: white
+      font-family: var(--primtext), sans-serif

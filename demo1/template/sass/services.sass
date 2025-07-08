@@ -1,0 +1,116 @@
+@use 'lib' as v
+
+#services
+    width: 100%
+    padding: 4rem 0
+    background-color: white
+    @include v.disflex()
+
+    ._services-wrapper
+        width: 80%
+        @include v.disflex($direction: column, $justify: start, $items: center)
+        gap: 3rem
+        ._services-header
+            @include v.disflex($direction: column, $justify: start, $items: center)
+            gap: .4rem
+            ._services-welcome
+                position: relative
+                padding: 2rem
+                
+                ._welcome-wavy
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+
+                span
+                    color: var(--colors)
+                    font-weight: 600
+            ._services-title
+                font-weight: 700
+                line-height: 1.15
+                letter-spacing: -.02em
+                font-size: 30px
+                text-align: center
+                @media (min-width: 768px)
+                    font-size: 54px
+                span
+                    font-weight: 300
+            
+            ._services-desc
+                font-size: 16px
+                text-align: center
+                font-weight: 500
+                line-height: 26px
+                color: var(--text-color2)
+
+        ._services-content
+            width: 100%
+            display: grid
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(6, auto)
+            @media (min-width: 500px)
+                grid-template-columns: repeat(2, 1fr)
+                grid-template-rows: repeat(3, auto)
+            @media (min-width: 1000px)
+                grid-template-columns: repeat(3, 1fr)
+                grid-template-rows: repeat(2, auto)
+
+            ._service-card
+                gap: 1rem
+                padding: 3rem 1rem
+                @include v.disflex($direction: column, $justify: center, $items: center)
+                &:hover ._card-image-wrapper
+                    scale: 1.2
+                &:hover ._card-image-wrapper ._card-image
+                    scale: 0.6
+                    top: 38%
+                    left: 40%
+                    transform: translate(-60%, -52%)
+
+                &:nth-child(-n+3) 
+                    @media (min-width: 1000px)
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+                &:nth-child(3n+1)
+                    @media (min-width: 1000px)
+                        border-right: 1px solid rgba(0, 0, 0, 0.05)
+                &:nth-child(3n)
+                    @media (min-width: 1000px)
+                        border-left: 1px solid rgba(0, 0, 0, 0.05)
+                &:nth-child(n+7)
+                    @media (min-width: 1000px)
+                        border-top: 1px solid rgba(0, 0, 0, 0.05)
+
+
+                ._card-image-wrapper
+                    position: relative
+                    width: 140px
+                    transition: all ease-in-out .5s
+                    aspect-ratio: 1/1
+                    border-radius: 999em
+                    ._card-image
+                        position: absolute
+                        transition: all ease-in-out .5s
+                        top: 60%
+                        left: 50%
+                        transform: translate(-50%, -40%)
+                        width: 110px
+                        height: 115px
+                ._card-title
+                    margin-top: 2rem
+                    font-size: 18px
+                    color: var(--text-color2)
+                    font-weight: 500
+                    line-height: .9
+                    text-align: center
+
+                ._card-subtitle
+                    font-size: 22px
+                    font-weight: 600
+                    text-align: center
+                    width: 80%
+                    line-height: 1.28
+
+
+

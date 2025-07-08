@@ -1,0 +1,41 @@
+@use 'lib' as v
+
+#_minimal
+  width: 100%
+  @include v.flx($d: column, $j: start, $i: stretch, $g: 0)
+  padding: 100px 0 0 0
+  background-color: white
+
+  ._minimal-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column, $j: start, $i: stretch, $g: 5rem)
+    @media (min-width: 1000px)
+      @include v.flx($d: row, $j: center, $i: center)
+
+    ._header
+      @include v.flx($d: column, $j: start, $i: end)
+      @media (min-width: v.$md)
+        width: 50%
+
+
+      ._icon
+        color: #11aff1
+        font-size: 3rem
+
+      ._title
+        @include v.heading()
+
+      ._desc
+        @include v.subtext()
+        text-align: right
+
+    ._content
+      overflow: hidden
+      @include v.flx()
+      @media (min-width: v.$md)
+        width: 50%
+
+      ._phone
+        width: 70%
+        margin-bottom: -50%

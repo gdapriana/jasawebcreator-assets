@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --colors: #C10E1C;
+  --primtext: Poppins, sans-serif;
+}
+
+.container-global {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+body {
+  font-family: var(--primtext), sans-serif;
+}

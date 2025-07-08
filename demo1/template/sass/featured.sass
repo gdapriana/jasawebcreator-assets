@@ -1,0 +1,135 @@
+@use 'lib' as v
+
+.slick-slide 
+    margin: 0 16px
+
+
+.slick-list 
+    margin: 0 -16px
+
+#featured
+    padding: 2rem 1rem
+    width: 100%
+    gap: 2rem
+    background-color: white
+    @include v.disflex($direction: column, $justify: start, $items: center)
+
+    ._featured-header
+        width: 80%
+        @include v.disflex($direction: column, $justify: start, $items: start)
+
+        ._featured-welcome
+            position: relative
+            padding: 2rem
+            
+            ._welcome-wavy
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+
+            span
+                color: var(--colors)
+                font-weight: 600
+        
+        ._featured-title-arrow
+            width: 100%
+            @include v.disflex($justify: space-between, $items: center)
+            gap: 1rem
+
+            ._featured-title
+                font-weight: 700
+                line-height: 1.15
+                letter-spacing: -.02em
+                font-size: 30px
+                @media (min-width: 768px)
+                    font-size: 54px
+
+            ._featured-arrow
+                @include v.disflex()
+                gap: .6rem
+
+                button
+                    width: 40px
+                    aspect-ratio: 1/1
+                    border: 1px solid var(--colors)
+                    color: var(--colors)
+                    background-color: transparent
+                    border-radius: 999em
+                    transition: all ease-in-out .5s
+                    cursor: pointer
+                    &:hover
+                        background-color: var(--colors)
+                        color: white
+
+    ._featured-content
+        width: 100%
+        @include v.disflex()
+
+        ._featured-card
+            position: relative
+            width: 450px
+            height: 330px
+            border-radius: 1rem
+            overflow: hidden
+            @include v.disflex()
+            &:hover ._featured-overlay-1
+                background-color: rgba(0, 0, 0, 0.5)
+
+            ._featured-card-content
+                position: absolute
+                bottom: 0
+                left: 0
+                z-index: 4
+                @include v.disflex($direction: column, $justify: start, $items: start)
+                gap: .6rem
+                margin: 2rem
+
+                ._featured-card-categories
+                    @include v.disflex($justify: start, $items: center)
+                    gap: .4rem
+                    span
+                        background-color: rgba(255, 255, 255, 0.4)
+                        padding: 4px 10px
+                        border-radius: 4px
+                        color: white
+
+                ._featured-card-title
+                    color: white
+                    font-size: 20px
+                    line-height: 1.2
+                    font-weight: 600
+                    @media (min-width: 768px)
+                        font-size: 24px
+
+            ._featured-overlay-1
+                transition: all ease-in-out .5s
+                z-index: 3
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+
+
+            ._featured-overlay-2
+                z-index: 2
+                position: absolute
+                background: #000000
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.81) 0%, rgba(255, 255, 255, 0) 100%)
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                
+
+            ._featured-card-cover
+                z-index: 1
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                object-fit: cover
+

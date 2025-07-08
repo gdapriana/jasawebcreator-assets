@@ -1,0 +1,42 @@
+@use 'lib' as v
+
+* 
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+:root
+    --e-global-color-primary: #0E0B3D
+    --e-global-color-secondary: #1463FF 
+    --e-global-color-text: #0E0B3DA6 
+    --e-global-color-accent: #D1FBFF 
+    --e-global-color-9714378: #FFFFFF 
+    --e-global-color-a031761: #FFFFFF2B 
+    --e-global-color-61ab42d: #FFFFFFA6 
+    --e-global-color-e573517: #FFBD48 
+    --e-global-color-f13ace2: #E8F3FF 
+    --e-global-color-986cc43: #EEE8FF 
+    --e-global-color-42a1e1c: #6F46EB 
+    --e-global-color-34b9103: #FCFCFF 
+    --e-global-color-3907128: #0E0B3D1A 
+    --e-global-typography-primary-font-family: "Manrope", sans-serif
+    --e-global-typography-text-font-family: "Inter", sans-serif
+
+body 
+    font-family: var(--e-global-typography-text-font-family)
+
+a
+    text-decoration: none
+
+._pill
+    padding: 10px 20px
+    border-radius: 999em
+    border: 1px solid #0E0B3D26
+    background-color: #fff
+    @include v.disflex()
+
+    p
+        text-transform: uppercase
+        color: var(--e-global-color-secondary)
+        font-size: 14px
+        

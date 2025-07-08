@@ -1,0 +1,174 @@
+@use 'lib' as v
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,100..900;1,100..900&family=Oooh+Baby&display=swap')
+
+:root
+    --colors: #D29F54
+    --decotext: "Oooh Baby", cursive
+    --primtext: "Italiana", sans-serif
+    --subtext: "Jost", sans-serif
+
+body 
+    margin: 0
+
+#_process-root * 
+    padding: 0
+    margin: 0
+
+#_process-root
+    display: none
+    width: 100vw
+    overflow: none
+    @media (min-width: 768px) 
+        display: block
+        
+
+    ._process-wrapper
+        height: 500vh
+        position: relative
+        background-color: var(--colors)
+
+        div 
+            ._process-header
+                width: 100%
+                padding: 0 7%
+                position: absolute
+                top: 190px
+                left: 0
+                ._span
+                    font-family: var(--decotext)
+
+                ._title
+                    font-family: var(--primtext)
+                    color: white
+
+        & > div
+            position: sticky
+            top: 0
+            overflow: hidden
+            height: 100vh
+
+            ._process-group
+                display: flex
+
+                ._process-item
+                    margin-top: 4.5rem
+                    position: relative
+                    width: 100vw
+                    height: 100vh
+                    flex: 0 0 auto
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    overflow: hidden
+                    gap: 1rem
+
+                    ._process-item-wrapper
+                        width: 80%
+                        display: flex
+                        gap: 2rem
+                        justify-content: center
+                        align-items: center
+                        img
+                            width: 50%
+                            transform: translateX(100px)
+
+                        ._item-desc
+                            display: flex
+                            flex-direction: column
+                            justify-content: center
+                            align-items: start 
+                            background-color: white
+                            gap: 1rem
+                            padding: 2rem
+                            transform: translateX(-100px)
+
+                            ._item-title
+                                font-family: var(--primtext)
+                                font-size: 2rem
+                                font-weight: 400
+                                color: var(--colors)
+                                
+                            ._item-description
+                                font-family: var(--subtext)
+                                font-size: 1.2rem
+                                color: var(--colors) 
+                                font-weight: 200
+
+
+#_process-root-mobile *
+    padding: 0
+    margin: 0
+    letter-spacing: 0
+    box-sizing: border-box
+
+#_process-root-mobile
+    background-color: var(--colors)
+    width: 100%
+    @media (min-width: 768px) 
+        display: none
+
+    ._process-wrapper-mobile
+        position: relative
+        width: 100%
+        @include v.disflex($direction: column, $justify: start, $items: stretch)
+
+        ._process-header-mobile
+            position: sticky
+            top: 0
+            @include v.disflex($direction: column, $justify: start, $items: center)
+            color: white
+            padding: 4rem 0
+            ._span
+                font-family: var(--decotext)
+                font-size: 18px
+            ._title
+                font-family: var(--primtext)
+                font-size: 24px
+
+        ._process-card-mobile
+            position: sticky
+            top: 0
+            width: 100%
+            height: 400px
+            padding: 1rem
+            overflow: hidden
+            @include v.disflex($direction: column, $justify: end, $items: stretch)
+            
+
+            ._card-content
+                z-index: 4
+                @include v.disflex($direction: column, $justify: start, $items: start)
+                gap: .6rem
+                width: 100%
+                background-color: white
+                padding: 1rem
+                color: var(--colors)
+                overflow: auto
+
+                ._card-title
+                    font-family: var(--primtext)
+                    font-weight: 500
+                    font-size: 20px
+
+                ._card-desc
+                    font-family: var(--subtext)
+                    font-size: 14px
+
+            ._card-overlay
+                width: 100%
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                background-color: rgba(0, 0, 0, 0.5)
+                z-index: 3
+
+            img
+                width: 100%
+                position: absolute
+                top: 0
+                z-index: 2
+                left: 0
+                height: 100%
+                object-fit: cover
+

@@ -1,0 +1,96 @@
+
+@use 'lib' as v
+
+#projects
+    width: 100%
+    background-color: white
+    @include v.disflex()
+
+    ._projects-wrapper
+        width: 80%
+        gap: 1.4rem
+        @include v.disflex($direction: column, $justify: start, $items: center)
+
+        ._projects-header
+            z-index: 1
+            border-radius: 2rem
+            width: 100%
+            background-color: red
+            height: 300px
+            padding: 1rem
+            @media (min-width: 768px)
+                height: 350px
+            @include v.disflex($direction: column, $justify: center, $items: center)
+            ._projects-welcome
+                position: relative
+                padding: 2rem
+                @media (min-width: 1000px)
+                    transform: translateY(-70px)
+                
+                ._welcome-wavy
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+
+                span
+                    color: white
+                    font-weight: 600
+            ._projects-title
+                font-weight: 700
+                color: white
+                line-height: 1.15
+                letter-spacing: -.02em
+                font-size: 30px
+                text-align: center
+                @media (min-width: 1000px)
+                    font-size: 54px
+                    transform: translateY(-70px)
+
+        ._projects-content
+            z-index: 2
+            width: 100%
+            @include v.disflex($direction: column, $justify: start, $items: stretch)
+            gap: 2rem
+            @media (min-width: 1000px)
+                transform: translateY(-140px)
+                @include v.disflex($direction: row, $justify: center, $items: center)
+                width: 80%
+
+            & > div
+                background-color: white
+                padding: 2rem
+                border-radius: 14px
+                box-shadow: rgba(8, 10, 55, 0.1) 0px 25px 70px
+                @include v.disflex($direction: column, $items: center, $justify: center)
+                gap: .4rem
+                @media (min-width: 768px)
+                    flex: 1
+
+                ._content-headline
+                    font-weight: 500
+                    color: var(--text-color2)
+                    font-size: 18px
+                    line-height: 1
+
+                ._content-head
+                    font-size: 24px
+                    line-height: 30px
+                    @media (min-width: 768px)
+                        font-size: 40px
+                        line-height: 46px
+                    color: #131683
+
+                    span
+                        font-size: 50px
+
+                ._content-sub
+                    @include v.disflex()
+                    gap: .8rem
+                    color: var(--text-color2)
+
+                    p
+                        font-size: 16px
+
+                

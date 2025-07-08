@@ -1,0 +1,109 @@
+#_wcu-root {
+  background-color: var(--colors);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+#_wcu-root * {
+  padding: 0;
+  margin: 0;
+}
+#_wcu-root ._wrapper {
+  width: 100%;
+  padding: 0 7%;
+  display: grid;
+  gap: clamp(1rem, 2vw, 3rem);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "head" "a" "b" "c";
+}
+@media (min-width: 1000px) {
+  #_wcu-root ._wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "head a" "b c";
+  }
+}
+#_wcu-root ._wrapper ._header {
+  grid-area: head;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+#_wcu-root ._wrapper ._header ._pill {
+  background-color: white;
+  color: var(--colors);
+  padding: 0.4rem 1rem;
+  border-radius: 999em;
+  font-family: var(--primtext), sans-serif;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1000px) {
+  #_wcu-root ._wrapper ._header ._pill {
+    font-size: 16px;
+  }
+}
+#_wcu-root ._wrapper ._header ._title {
+  font-family: var(--primtext), sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-align: start;
+}
+#_wcu-root ._wrapper ._header ._description {
+  text-align: start;
+  color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  max-width: 700px;
+  font-family: var(--primtext), sans-serif;
+  font-size: 16px;
+}
+#_wcu-root ._wrapper ._card {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.6rem;
+}
+#_wcu-root ._wrapper ._card ._icon {
+  background-color: var(--colors);
+  padding: 1rem;
+  border-radius: 999em;
+}
+#_wcu-root ._wrapper ._card ._icon i {
+  font-size: clamp(2rem, 2vw, 3.6rem);
+  color: white;
+}
+#_wcu-root ._wrapper ._card ._title {
+  font-weight: 600;
+  font-family: var(--primtext), sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+#_wcu-root ._wrapper ._card ._description {
+  font-size: 16px;
+  font-family: var(--primtext), sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+}
+#_wcu-root ._wrapper ._card:first-child {
+  grid-area: a;
+}
+#_wcu-root ._wrapper ._card:nth-child(2) {
+  grid-area: b;
+}
+#_wcu-root ._wrapper ._card:last-child {
+  grid-area: c;
+}
+
+/*# sourceMappingURL=wcu.css.map */

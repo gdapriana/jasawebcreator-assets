@@ -1,0 +1,120 @@
+#_adore {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 0;
+  padding: 100px 0;
+  background-color: white;
+}
+#_adore ._adore-wrapper {
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 5rem;
+}
+@media (min-width: 1000px) {
+  #_adore ._adore-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+  }
+}
+#_adore ._adore-wrapper ._header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+}
+@media (min-width: 1000px) {
+  #_adore ._adore-wrapper ._header {
+    width: 50%;
+  }
+}
+#_adore ._adore-wrapper ._header ._icon {
+  color: #11aff1;
+  font-size: 3rem;
+}
+#_adore ._adore-wrapper ._header ._title {
+  font-size: 32px;
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-col-1);
+}
+#_adore ._adore-wrapper ._header ._subtitle {
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-col-1);
+}
+#_adore ._adore-wrapper ._header ._desc {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-col-1);
+  line-height: 1.8;
+}
+#_adore ._adore-wrapper ._header ._add {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 1rem;
+}
+#_adore ._adore-wrapper ._header ._add ._add-card {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+#_adore ._adore-wrapper ._header ._add ._add-card ._card-icon {
+  color: #11aff1;
+  font-size: 40px;
+}
+#_adore ._adore-wrapper ._header ._add ._add-card ._card-title-desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+}
+#_adore ._adore-wrapper ._header ._add ._add-card ._card-title-desc ._card-title {
+  font-size: 20px;
+  font-weight: 400;
+}
+#_adore ._adore-wrapper ._header ._add ._add-card ._card-title-desc ._card-desc {
+  color: rgba(0, 0, 0, 0.5);
+}
+#_adore ._adore-wrapper ._image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 1000px) {
+  #_adore ._adore-wrapper ._image {
+    width: 50%;
+  }
+}
+#_adore ._adore-wrapper ._image img {
+  width: 80%;
+}
+
+/*# sourceMappingURL=adore.css.map */

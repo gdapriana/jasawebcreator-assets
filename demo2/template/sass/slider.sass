@@ -1,0 +1,81 @@
+@use 'lib' as v
+
+#_slider
+  width: 100%
+  @include v.flx($d: column, $j: start, $i: stretch, $g: 0)
+  background-color: var(--white-col-1)
+
+  ._slider-wrapper
+    width: 100%
+    @include v.pad()
+    @include v.flx($d: column-reverse, $j: start, $i: stretch)
+    @media (min-width: v.$md)
+      @include v.flx($d: row, $j: center, $i: center)
+      & > div
+        width: 50%
+
+    ._image
+      ._phone-wrap
+        max-width: 100%
+        position: relative
+        ._hand
+          max-width: 100%
+
+        ._screen-wrapper
+          position: absolute
+          top: 16%
+          left: 40%
+          max-width: 40%
+          @media (min-width: v.$md)
+            top: 15%
+            left: 33%
+            max-width: 34%
+          @include v.flx()
+
+          ._screen
+            img
+              width: 100%
+
+
+    ._content
+      @include v.flx($d: column, $j: start, $i: start, $g: 1.6rem)
+
+      ._title
+        @include v.heading()
+
+      ._description-1
+        @include v.subtext()
+
+      ._cta-wrapper
+        @include v.flx()
+
+        a
+          padding: 10px 16px
+          border-radius: 999em
+          @include v.trans()
+          @media (min-width: v.$md)
+            padding: 12px 40px
+
+        ._cta-1
+          color: var(--blue-col)
+          border: 1px solid var(--blue-col)
+          &:hover
+            background-color: var(--blue-col)
+            color: white
+
+        ._cta-2
+          color: var(--green-col)
+          border: 1px solid var(--green-col)
+          &:hover
+            background-color: var(--green-col)
+            color: white
+
+      ._description-2
+        @include v.subtext($cl: var(--text-col-2))
+
+  ._company-wrapper
+    background-color: #f0f4f6
+    width: 100%
+    @include v.pad($tb: 2rem)
+    @include v.flx()
+

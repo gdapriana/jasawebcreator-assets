@@ -1,0 +1,128 @@
+@use 'lib' as v
+
+#blogs
+    width: 100%
+    @include v.disflex($direction: column, $justify: start, $items: center)
+    gap: 2rem
+    padding: 4rem 0
+    background-color: white
+
+    ._blogs-header
+        width: 80%
+        @include v.disflex($direction: column, $justify: start, $items: start)
+
+        ._blogs-welcome
+            position: relative
+            padding: 2rem
+            
+            ._welcome-wavy
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+
+            span
+                color: var(--colors)
+                font-weight: 600
+        
+        ._blogs-title-cta
+            width: 100%
+            @include v.disflex( $direction: column, $justify: start, $items: start)
+            @media (min-width: 768px)
+                @include v.disflex( $direction: row, $justify: space-between, $items: center)
+            gap: 1rem
+
+            ._blogs-title
+                font-weight: 700
+                line-height: 1.15
+                letter-spacing: -.02em
+                font-size: 30px
+                @media (min-width: 768px)
+                    font-size: 54px
+            
+            ._blogs-cta
+                background-color: var(--colors)
+                color: white
+                font-weight: 600
+                font-size: 16px
+                line-height: 10px
+                padding: 17px 28px
+                border-radius: 6px
+
+    ._blogs-content
+        width: 80%
+        display: grid
+        grid-template-columns: 1fr
+        gap: 1rem
+        @media (min-width: 768px)
+            grid-template-columns: repeat(2, 1fr)
+        @media (min-width: 1000px)
+            grid-template-columns: repeat(3, 1fr)
+
+        ._blog-card
+            padding: 25px
+            @include v.disflex($direction: column, $justify: start, $items: stretch)
+            border-radius: 20px
+            gap: 1rem
+            &:hover
+                border: 1px solid rgba(0, 0, 0, 0.1)
+
+            &:hover ._blog-cover-wrapper ._blog-cover
+                scale: 1.2
+                rotate: 5deg
+
+            ._blog-cover-wrapper
+                border-radius: 10px
+                position: relative
+                overflow: hidden
+                aspect-ratio: 16/9
+
+                img._blog-cover
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    transition: all ease-in-out .3s
+                    object-fit: cover
+
+            ._blog-categories
+                @include v.disflex($justify: start)
+                gap: .4rem
+                ._cat-item
+                    color: var(--text-color2)
+                    border: 1px solid rgba(12,19,56,.1)
+                    padding: 4px 11px
+                    font-size: 13px
+                    font-weight: 500
+                    letter-spacing: .02em
+                    border-radius: 4px
+            ._blog-title
+                font-size: 20px
+                font-weight: 600
+                line-height: 1.4
+                text-transform: capitalize
+                letter-spacing: 0
+
+            ._blog-user
+                @include v.disflex($justify: start)
+                gap: .6rem
+                img._profile
+                    width: 40
+                    aspect-ratio: 1/1
+                    border-radius: 999em
+
+                ._user-name-uploaded
+                    @include v.disflex($direction: column, $justify: start, $items: start)
+                    gap: .6rem
+                    ._username
+                        font-size: 15px
+                        font-weight: 600
+                        line-height: 18px
+                        margin-bottom: -5px
+                    ._uploaded-at
+                        font-weight: 400
+                        font-size: 14px
+                        line-height: 18px
+                        padding: 0
+                        margin: 0
+                        color: var(--text-color2)
